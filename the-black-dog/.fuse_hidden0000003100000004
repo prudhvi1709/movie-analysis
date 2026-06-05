@@ -65,7 +65,7 @@
   .note{font-size:12px;color:var(--muted);font-style:italic}
   footer{margin-top:46px;border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--muted)}
   a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
-  @media(max-width:760px){.grid2,.grid3,.grid4,.twocol{grid-template-columns:1fr}.card{overflow-x:auto}.wrap{padding:22px 14px 72px}}
+  @media(max-width:760px){.grid2,.grid3,.grid4,.twocol{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
