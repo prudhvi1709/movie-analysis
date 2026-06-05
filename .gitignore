@@ -2,3 +2,5 @@
 *.log
 .vscode/
 node_modules/
+.fuse_hidden*
+*.fuse_hidden*
