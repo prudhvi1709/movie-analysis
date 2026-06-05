@@ -1,0 +1,378 @@
+{
+  "srv_analysis": {
+    "original_post": {
+      "views": 2178806,
+      "likes": 89552,
+      "reposts": 26442,
+      "replies": 4339,
+      "bookmarks": 2653,
+      "engagement_rate": 5.522887306166772,
+      "bookmark_rate": 0.12176393859756214
+    },
+    "sentiment": {
+      "positive": 124,
+      "neutral": 251,
+      "negative": 13,
+      "positive_pct": 31.958762886597935,
+      "neutral_pct": 64.69072164948454,
+      "negative_pct": 3.350515463917526
+    },
+    "top_keywords": {
+      "prabhas": 47,
+      "vanga": 27,
+      "poster": 26,
+      "spirit": 20,
+      "anna": 17,
+      "look": 17,
+      "from": 16,
+      "like": 15,
+      "new": 15,
+      "movie": 14,
+      "year": 13,
+      "vangod": 13,
+      "animal": 13,
+      "rebel": 12,
+      "biggest": 11,
+      "hey": 11,
+      "tripti": 10,
+      "not": 10,
+      "same": 10,
+      "remove": 10,
+      "just": 9,
+      "one": 9,
+      "india": 9,
+      "superstar": 9,
+      "happy": 9,
+      "sandeep": 9,
+      "mental": 9,
+      "looks": 9,
+      "all": 9,
+      "replace": 9
+    },
+    "hourly_engagement": {
+      "0": {
+        "replies": 2,
+        "total_likes": 0,
+        "total_views": 93,
+        "total_reposts": 0
+      },
+      "1": {
+        "replies": 1,
+        "total_likes": 1,
+        "total_views": 3,
+        "total_reposts": 0
+      },
+      "2": {
+        "replies": 1,
+        "total_likes": 1,
+        "total_views": 21,
+        "total_reposts": 0
+      },
+      "3": {
+        "replies": 1,
+        "total_likes": 0,
+        "total_views": 26,
+        "total_reposts": 0
+      },
+      "4": {
+        "replies": 0,
+        "total_likes": 0,
+        "total_views": 0,
+        "total_reposts": 0
+      },
+      "5": {
+        "replies": 0,
+        "total_likes": 0,
+        "total_views": 0,
+        "total_reposts": 0
+      },
+      "6": {
+        "replies": 0,
+        "total_likes": 0,
+        "total_views": 0,
+        "total_reposts": 0
+      },
+      "7": {
+        "replies": 0,
+        "total_likes": 0,
+        "total_views": 0,
+        "total_reposts": 0
+      },
+      "8": {
+        "replies": 0,
+        "total_likes": 0,
+        "total_views": 0,
+        "total_reposts": 0
+      },
+      "9": {
+        "replies": 0,
+        "total_likes": 0,
+        "total_views": 0,
+        "total_reposts": 0
+      },
+      "10": {
+        "replies": 0,
+        "total_likes": 0,
+        "total_views": 0,
+        "total_reposts": 0
+      },
+      "11": {
+        "replies": 0,
+        "total_likes": 0,
+        "total_views": 0,
+        "total_reposts": 0
+      },
+      "12": {
+        "replies": 0,
+        "total_likes": 0,
+        "total_views": 0,
+        "total_reposts": 0
+      },
+      "13": {
+        "replies": 1,
+        "total_likes": 0,
+        "total_views": 123,
+        "total_reposts": 0
+      },
+      "14": {
+        "replies": 1,
+        "total_likes": 0,
+        "total_views": 40,
+        "total_reposts": 0
+      },
+      "15": {
+        "replies": 3,
+        "total_likes": 4,
+        "total_views": 248,
+        "total_reposts": 0
+      },
+      "16": {
+        "replies": 1,
+        "total_likes": 0,
+        "total_views": 14,
+        "total_reposts": 0
+      },
+      "17": {
+        "replies": 3,
+        "total_likes": 2,
+        "total_views": 770,
+        "total_reposts": 0
+      },
+      "18": {
+        "replies": 5,
+        "total_likes": 0,
+        "total_views": 662,
+        "total_reposts": 0
+      },
+      "19": {
+        "replies": 7,
+        "total_likes": 3,
+        "total_views": 531,
+        "total_reposts": 1
+      },
+      "20": {
+        "replies": 6,
+        "total_likes": 3,
+        "total_views": 2160,
+        "total_reposts": 0
+      },
+      "21": {
+        "replies": 2,
+        "total_likes": 3,
+        "total_views": 293,
+        "total_reposts": 0
+      },
+      "22": {
+        "replies": 6,
+        "total_likes": 6,
+        "total_views": 776,
+        "total_reposts": 1
+      },
+      "23": {
+        "replies": 4,
+        "total_likes": 1,
+        "total_views": 3037,
+        "total_reposts": 0
+      },
+      "24": {
+        "replies": 7,
+        "total_likes": 10,
+        "total_views": 6990,
+        "total_reposts": 2
+      },
+      "25": {
+        "replies": 2,
+        "total_likes": 0,
+        "total_views": 255,
+        "total_reposts": 0
+      },
+      "26": {
+        "replies": 6,
+        "total_likes": 1,
+        "total_views": 1237,
+        "total_reposts": 0
+      },
+      "27": {
+        "replies": 11,
+        "total_likes": 5,
+        "total_views": 2107,
+        "total_reposts": 0
+      },
+      "28": {
+        "replies": 18,
+        "total_likes": 142,
+        "total_views": 27292,
+        "total_reposts": 6
+      },
+      "29": {
+        "replies": 10,
+        "total_likes": 8,
+        "total_views": 3855,
+        "total_reposts": 0
+      },
+      "30": {
+        "replies": 9,
+        "total_likes": 11,
+        "total_views": 1445,
+        "total_reposts": 0
+      },
+      "31": {
+        "replies": 1,
+        "total_likes": 45,
+        "total_views": 4671,
+        "total_reposts": 3
+      },
+      "32": {
+        "replies": 2,
+        "total_likes": 11,
+        "total_views": 6169,
+        "total_reposts": 1
+      },
+      "33": {
+        "replies": 1,
+        "total_likes": 0,
+        "total_views": 33,
+        "total_reposts": 0
+      },
+      "34": {
+        "replies": 1,
+        "total_likes": 3,
+        "total_views": 356,
+        "total_reposts": 0
+      },
+      "35": {
+        "replies": 0,
+        "total_likes": 0,
+        "total_views": 0,
+        "total_reposts": 0
+      },
+      "36": {
+        "replies": 24,
+        "total_likes": 384,
+        "total_views": 84388,
+        "total_reposts": 8
+      },
+      "37": {
+        "replies": 252,
+        "total_likes": 24582,
+        "total_views": 1608972,
+        "total_reposts": 3480
+      }
+    },
+    "reply_stats": {
+      "total_replies": 388,
+      "avg_likes": 65.01546391752578,
+      "median_likes": 5.0,
+      "max_likes": 3562,
+      "total_impressions": 1756567,
+      "unique_users": 345
+    },
+    "top_replies": [
+      {
+        "handle": "JioHotstarTel_",
+        "message": "Land konesi uncham... Hit koduthunnam... Gudi kaduthunnam anthe!  \n@imvangasandeep\n #AJANUBAHUDU",
+        "likes": 3562,
+        "views": 117771,
+        "sentiment": "positive"
+      },
+      {
+        "handle": "CricCrazyJohns",
+        "message": "Bad bad guy  Waiting for Prabhas in this version",
+        "likes": 2726,
+        "views": 88651,
+        "sentiment": "positive"
+      },
+      {
+        "handle": "HailPrabhas007",
+        "message": "Day-1 300CR tho lekka Modhalu avvadam kaayam.... India nundi USA daaga prathi RECORD eedchi eedchi kodtaadu mana Rebelodu \n\n#Prabhas #Spirit",
+        "likes": 1881,
+        "views": 42201,
+        "sentiment": "positive"
+      },
+      {
+        "handle": "RangasthalamIN",
+        "message": "Pañjāba, sindhu, gujarāta, marāṭha, drāviḍa, utkala VANGA",
+        "likes": 1150,
+        "views": 88624,
+        "sentiment": "neutral"
+      },
+      {
+        "handle": "Varma_Tweetz",
+        "message": "Anna",
+        "likes": 1080,
+        "views": 67867,
+        "sentiment": "neutral"
+      },
+      {
+        "handle": "Rebeltwetzz",
+        "message": "Rebel goddddd",
+        "likes": 721,
+        "views": 17707,
+        "sentiment": "neutral"
+      },
+      {
+        "handle": "ivdsai",
+        "message": null,
+        "likes": 698,
+        "views": 14764,
+        "sentiment": "neutral"
+      },
+      {
+        "handle": "Pandit_tweetz",
+        "message": "THE INDIA'S BIGGEST SUPERSTAR \nTHE MENTAL MANIAC DIRECTOR \nTHE MOST HYPED MOVIE OF DECADE\n\nTHE #SpiritFirstLook Of The #Prabhas\n\n#Spirit #OneBadHabit \n\n\nhttps://\nx.com/i/status/19323\n30246801633773/video/1\n…",
+        "likes": 619,
+        "views": 17818,
+        "sentiment": "positive"
+      },
+      {
+        "handle": "The_Tribbiani",
+        "message": "Bro selling drugs on new year publicly \n#Spirit #Prabhas",
+        "likes": 552,
+        "views": 8850,
+        "sentiment": "positive"
+      },
+      {
+        "handle": "ActorVijayTeam",
+        "message": "TERRIFIC  \n\nBest wishes to Prabhas Garu and the entire team of Spirit.\n\nMay this one roar loud, break barriers, and set the screens on fire.\n\nWishes on behalf of Thalapathy Vijay and his fans",
+        "likes": 450,
+        "views": 41244,
+        "sentiment": "positive"
+      }
+    ]
+  },
+  "spirit_mode_analysis": {
+    "positive": 91,
+    "neutral": 48,
+    "negative": 2,
+    "total": 141
+  },
+  "combined_sentiment": {
+    "positive": 215,
+    "positive_pct": 40.64272211720227,
+    "neutral": 299,
+    "neutral_pct": 56.52173913043478,
+    "negative": 15,
+    "negative_pct": 2.835538752362949,
+    "total_analyzed": 529
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "main_post_time_utc": "2025-12-31T18:28:49+00:00",
+  "main_post_time_ist": "2025-12-31 23:58:49 IST",
+  "hourly_activity": {
+    "0": {
+      "replies": 262,
+      "cumulative_views": 1681619
+    },
+    "1": {
+      "replies": 14,
+      "cumulative_views": 11741
+    },
+    "3": {
+      "replies": 1,
+      "cumulative_views": 356
+    },
+    "4": {
+      "replies": 1,
+      "cumulative_views": 33
+    },
+    "5": {
+      "replies": 2,
+      "cumulative_views": 6169
+    },
+    "6": {
+      "replies": 2,
+      "cumulative_views": 4770
+    },
+    "7": {
+      "replies": 8,
+      "cumulative_views": 1346
+    },
+    "8": {
+      "replies": 13,
+      "cumulative_views": 4443
+    },
+    "9": {
+      "replies": 17,
+      "cumulative_views": 27084
+    },
+    "10": {
+      "replies": 12,
+      "cumulative_views": 2447
+    },
+    "11": {
+      "replies": 3,
+      "cumulative_views": 517
+    },
+    "12": {
+      "replies": 4,
+      "cumulative_views": 700
+    },
+    "13": {
+      "replies": 7,
+      "cumulative_views": 7251
+    },
+    "14": {
+      "replies": 3,
+      "cumulative_views": 2431
+    },
+    "15": {
+      "replies": 5,
+      "cumulative_views": 676
+    },
+    "16": {
+      "replies": 2,
+      "cumulative_views": 293
+    },
+    "17": {
+      "replies": 8,
+      "cumulative_views": 2411
+    },
+    "18": {
+      "replies": 6,
+      "cumulative_views": 391
+    },
+    "19": {
+      "replies": 4,
+      "cumulative_views": 551
+    },
+    "20": {
+      "replies": 3,
+      "cumulative_views": 770
+    },
+    "21": {
+      "replies": 1,
+      "cumulative_views": 14
+    },
+    "22": {
+      "replies": 3,
+      "cumulative_views": 248
+    },
+    "23": {
+      "replies": 1,
+      "cumulative_views": 40
+    },
+    "24": {
+      "replies": 1,
+      "cumulative_views": 123
+    },
+    "34": {
+      "replies": 1,
+      "cumulative_views": 26
+    },
+    "35": {
+      "replies": 1,
+      "cumulative_views": 21
+    },
+    "36": {
+      "replies": 2,
+      "cumulative_views": 51
+    },
+    "37": {
+      "replies": 1,
+      "cumulative_views": 45
+    }
+  },
+  "peak_hour": 0,
+  "peak_count": 262,
+  "total_replies": 388
+}

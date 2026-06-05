@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Analysis - Index</title>
+<style>
+  :root{--bg:#0c0d0f;--card:#16181d;--card2:#1d2027;--ink:#eef0f3;--muted:#98a1b0;--line:#282c36;--gold:#e0a92e;--gold2:#f5c451;--blue:#5b9cf5}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1000px;margin:0 auto;padding:46px 22px 90px}
+  .kicker{color:var(--gold);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:12px}
+  h1{font-size:38px;margin:10px 0 6px;line-height:1.1;background:linear-gradient(90deg,#f5c451,#e0a92e 60%,#b07a14);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .lead{color:#cdd3dd;font-size:16px;max-width:640px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin-top:34px}
+  a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;text-decoration:none;color:inherit;transition:.18s}
+  a.card:hover{border-color:var(--gold);transform:translateY(-3px);background:var(--card2)}
+  .badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:6px;margin-bottom:12px}
+  .b-live{background:rgba(47,191,113,.16);color:#2fbf71;border:1px solid rgba(47,191,113,.4)}
+  .b-soon{background:rgba(245,166,35,.15);color:#f5a623;border:1px solid rgba(245,166,35,.4)}
+  .card h2{font-size:21px;margin:0 0 6px;color:#fff}
+  .card p{color:var(--muted);font-size:13.5px;margin:0}
+  .card .go{margin-top:14px;font-size:13px;color:var(--gold2);font-weight:600}
+  footer{margin-top:50px;border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--muted)}
+  a{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker">Prudhvi Krovvidi · Film Strategy &amp; Data</div>
+  <h1>Movie Analysis</h1>
+  <p class="lead">One destination for data-backed film analysis: release timing, competition mapping, promotion strategy, and social-buzz breakdowns across titles.</p>
+
+  <div class="grid">
+    <a class="card" href="./the-black-dog/">
+      <span class="badge b-live">Live</span>
+      <h2>The Black Gold</h2>
+      <p>Release date, teaser/trailer schedule, promotion plan, real X social-buzz history, and influencer outreach for Samyuktha Menon's pan-India cop thriller.</p>
+      <div class="go">Open analysis &rarr;</div>
+    </a>
+
+    <a class="card" href="./spirit-analysis/">
+      <span class="badge b-live">Live</span>
+      <h2>Spirit</h2>
+      <p>Social-media analytics dashboard for Spirit (Prabhas, dir. Sandeep Reddy Vanga), tracking first-look reception from 1 Jan 2026.</p>
+      <div class="go">Open analysis &rarr;</div>
+    </a>
+
+    <a class="card" href="./romanchakam-analysis/">
+      <span class="badge b-live">Live</span>
+      <h2>Romanchakam</h2>
+      <p>First-look reception report for Romanchakam, a musical rom-com from Bhadrakali Pictures presented by Sandeep Reddy Vanga (announced 29 May 2026).</p>
+      <div class="go">Open analysis &rarr;</div>
+    </a>
+  </div>
+
+  <footer>
+    Each card links to that film's folder. Edit the titles and descriptions above as you add more analyses.
+    Built as a static site, ready for GitHub Pages.
+  </footer>
+</div>
+</body>
+</html>

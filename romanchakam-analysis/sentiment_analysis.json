@@ -1,0 +1,12 @@
+{
+  "total_analyzed": 138,
+  "positive": 42,
+  "neutral": 85,
+  "negative": 11,
+  "positive_pct": 30.4,
+  "neutral_pct": 61.6,
+  "negative_pct": 8.0,
+  "direct_responses": 120,
+  "spirit_in_direct": 54,
+  "spirit_in_direct_pct": 45.0
+}

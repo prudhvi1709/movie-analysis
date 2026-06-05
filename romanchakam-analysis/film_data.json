@@ -1,0 +1,29 @@
+{
+  "film": {
+    "title": "Romanchakam",
+    "title_telugu": "రోమాంచకం",
+    "tagline": "Prema | Haasyam | Uthkanta  (Love | Comedy | Suspense)",
+    "genre": "Musical Romantic Comedy",
+    "presenter": "Sandeep Reddy Vanga (first film he is presenting)",
+    "production": "Bhadrakali Pictures",
+    "director": "Venu Gopal Reddy (debutant)",
+    "producer": "Pranay Reddy Vanga",
+    "lead_cast": [
+      "Sumanth Prabhas",
+      "Ananthika Sanilkumar"
+    ],
+    "music": "Vasuki Vaibhav",
+    "dop": "Pavan Pappula",
+    "music_label": "T-Series South",
+    "announced": "May 29, 2026, 5:01 PM IST"
+  },
+  "announcement": {
+    "views": 194600,
+    "likes": 7300,
+    "reposts": 624,
+    "replies": 116,
+    "bookmarks": 175,
+    "trend_posts": 49600,
+    "engagement_rate": 4.2
+  }
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Black Gold - Complete Release, Promotion &amp; Social Strategy</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{--bg:#0c0d0f;--card:#16181d;--card2:#1d2027;--ink:#eef0f3;--muted:#98a1b0;--line:#282c36;
+    --gold:#e0a92e;--gold2:#f5c451;--accent:#ff5630;--x:#1d9bf0;--reddit:#ff4500;--yt:#ff0033;--ig:#c13584;
+    --good:#2fbf71;--warn:#f5a623;--bad:#e5484d;--blue:#5b9cf5}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI',system-ui,-apple-system,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1100px;margin:0 auto;padding:30px 22px 90px}
+  .kicker{color:var(--gold);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:11.5px}
+  header.hero{border-bottom:1px solid var(--line);padding-bottom:22px}
+  h1{font-size:32px;margin:8px 0 4px;line-height:1.14;background:linear-gradient(90deg,#f5c451,#e0a92e 60%,#b07a14);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .part-divider{margin:54px 0 0;border:0;border-top:1px solid var(--line)}
+  .part-head{margin:30px 0 4px;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  h2{font-size:21px;margin:34px 0 12px;border-left:4px solid var(--gold);padding-left:12px;scroll-margin-top:70px}
+  h3{font-size:15.5px;margin:18px 0 6px}
+  p{color:#cdd3dd;margin:9px 0}
+  .sub{color:var(--muted);font-size:14px}
+  .meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px;font-size:12.5px;color:var(--muted)}
+  .meta span{background:var(--card2);border:1px solid var(--line);padding:5px 11px;border-radius:20px}
+  nav.toc{position:sticky;top:0;z-index:20;background:rgba(12,13,15,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:6px;padding:10px 0;margin:14px 0 0}
+  nav.toc a{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:18px;padding:4px 11px;background:var(--card2)}
+  nav.toc a:hover{color:var(--gold2);border-color:var(--gold)}
+  nav.toc .navlbl{font-size:11px;font-weight:700;color:var(--gold);align-self:center;letter-spacing:.1em;text-transform:uppercase;margin-right:2px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:16px 0}
+  .rec{background:linear-gradient(135deg,#241d10,#16181d);border:1px solid #4a3a16}
+  .rec .big{font-size:28px;font-weight:800;color:#fff;margin:3px 0}
+  .rec .alt{font-size:15px;color:var(--gold2);font-weight:600}
+  .warnbox{background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.35);border-radius:12px;padding:14px 16px;margin:16px 0;font-size:13px;color:#e7d8b8}
+  .keybox{background:rgba(29,155,240,.08);border:1px solid rgba(29,155,240,.35);border-radius:12px;padding:14px 16px;margin:16px 0;font-size:13.5px;color:#cfe6fb}
+  .pill{display:inline-block;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em}
+  .p-go{background:rgba(47,191,113,.16);color:var(--good);border:1px solid rgba(47,191,113,.4)}
+  .p-ok{background:rgba(245,166,35,.15);color:var(--warn);border:1px solid rgba(245,166,35,.4)}
+  .p-no{background:rgba(229,72,77,.15);color:var(--bad);border:1px solid rgba(229,72,77,.4)}
+  .p-v{background:rgba(91,156,245,.15);color:var(--blue);border:1px solid rgba(91,156,245,.4)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:15px}
+  .stat .n{font-size:22px;font-weight:800;color:var(--gold2)}
+  .stat .l{font-size:11.5px;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em}
+  td.score{font-weight:800}td.num{text-align:right;font-variant-numeric:tabular-nums}
+  tr.win td,tr.hot td{background:rgba(224,169,46,.09)}
+  .bar-wrap{background:#0c0d0f;border-radius:6px;height:9px;overflow:hidden;min-width:80px}
+  .bar{height:100%;border-radius:6px}
+  canvas{max-width:100%}
+  .legend{font-size:12px;color:var(--muted);margin-top:8px}
+  ul{margin:8px 0;padding-left:20px}li{margin:5px 0;color:#cdd3dd}
+  .tl{position:relative;margin:6px 0 0;border-left:2px solid var(--line);padding-left:18px}
+  .tl .ev{position:relative;margin:0 0 13px}
+  .tl .ev::before{content:'';position:absolute;left:-25px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--gold)}
+  .tl .ev.big::before{background:var(--bad);width:13px;height:13px;left:-26px}
+  .tl .ev.win::before{background:var(--good)}
+  .tl .d{font-weight:700;color:#fff;font-size:13.5px}.tl .t{font-size:12.5px;color:var(--muted)}
+  .play{background:var(--card2);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:14px 16px;margin:10px 0}
+  .play h3{margin:0 0 4px;color:var(--gold2);font-size:15px}.play .who{font-size:12px;color:var(--muted);margin-top:6px}
+  .tag{display:inline-block;font-size:11px;background:#11141a;border:1px solid var(--line);color:var(--muted);border-radius:5px;padding:2px 7px;margin:2px 3px 0 0}
+  .wbtns{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .wbtn{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;color:#fff;background:var(--x);border:1px solid #1a86d0;border-radius:7px;padding:5px 10px;text-decoration:none;transition:.15s}
+  .wbtn:hover{background:#1a86d0;text-decoration:none}
+  .wbtn::before{content:"𝕏";font-weight:800;font-size:11px}
+  .wbtn.alt{background:transparent;color:var(--x);border-color:#2a4a63}
+  .wbtn.alt:hover{background:rgba(29,155,240,.12)}
+  .chip{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;color:#fff}
+  .c-x{background:var(--x)}.c-r{background:var(--reddit)}.c-y{background:var(--yt)}.c-f{background:#1877f2}
+  .sent{font-weight:700}.s-pos{color:var(--good)}.s-mix{color:var(--warn)}.s-neg{color:var(--bad)}
+  .quote{border-left:3px solid var(--line);padding:6px 12px;margin:8px 0;color:#c2c8d2;font-style:italic;font-size:13px}
+  code{background:#11141a;border:1px solid var(--line);border-radius:4px;padding:1px 6px;color:var(--gold2);font-size:12.5px}
+  .note{font-size:12px;color:var(--muted);font-style:italic}
+  footer{margin-top:46px;border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--muted)}
+  a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+  @media(max-width:760px){.grid2,.grid3,.grid4{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">Complete Strategy Dossier · Data-Backed</div>
+    <h1>THE BLACK GOLD</h1>
+    <p class="sub">Heroine-led pan-India crime thriller · <strong>Samyuktha Menon</strong> as a cop vs. a coal-mafia syndicate · Dir. <strong>Yogesh KMC</strong> · Music <strong>Sam C S</strong> · Producer <strong>Razesh Danda</strong> (Hasya Movies × Maganti Pictures) · Inspired by real coal-syndicate events on the Telangana-Maharashtra border · Telugu / Hindi / Tamil / Malayalam / Kannada</p>
+    <div class="meta"><span>Home markets: Telangana &amp; Andhra Pradesh</span><span>Window: June-August 2026</span><span>Prepared June 2026</span></div>
+    <nav class="toc">
+      <span class="navlbl">Part A · Strategy</span>
+      <a href="#date">Release date</a><a href="#field">Competition</a><a href="#global">Global slate</a><a href="#calendar">Teaser/Trailer</a><a href="#buzz">Buzz plays</a><a href="#outreach">Outreach</a><a href="#influencers">Influencers</a><a href="#risks">Risks</a>
+      <span class="navlbl" style="margin-left:8px">Part B · Social</span>
+      <a href="#s-timeline">Buzz history</a><a href="#s-reach">Reach</a><a href="#s-posts">Top posts</a><a href="#s-do">Implications</a>
+    </nav>
+  </header>
+
+  <!-- ================= PART A ================= -->
+  <div class="part-head">Part A - Release date &amp; promotion strategy</div>
+
+  <div class="card rec">
+    <span class="pill p-go">Recommended release</span>
+    <div class="big">Friday, 7 August 2026</div>
+    <p>The only date in the window that pairs a genuinely clear competitive gap with <strong>two back-to-back long weekends</strong> - Bonalu (Sun 9 + public holiday Mon 10 Aug) and Independence Day (Sat 15 Aug) - before Nani's <em>The Paradise</em> seizes screens on 21 Aug. A real-incident female-cop thriller carried by content and word-of-mouth needs <strong>runway</strong>, and 7 Aug gives ~two weeks of it, with Independence Day arriving as a ready-made <em>week-2</em> patriotic booster ("the officer who chose law over the gun, this Independence Day").</p>
+    <div class="alt">Strong alternative - Friday 14 August: launches directly into the Independence Day long weekend with maximum patriotic punch, but only one clean week before <em>The Paradise</em>.</div>
+    <p class="note" style="margin-top:11px">Hard no-go: 3-24 July. Chiranjeevi's ₹200 cr+ <em>Vishwambhara</em> (eyeing 9-10 July) plus Rajinikanth's <em>Jailer 2</em> will swallow screens, shows and the media cycle.</p>
+  </div>
+  <div class="grid4">
+    <div class="stat"><div class="n">7 Aug</div><div class="l">Top-scored date (72/100)</div></div>
+    <div class="stat"><div class="n">2</div><div class="l">Long weekends of clear runway</div></div>
+    <div class="stat"><div class="n">31 Jul</div><div class="l">Trailer drop (T-7 days)</div></div>
+    <div class="stat"><div class="n">21 Jul</div><div class="l">Teaser drop (T-17 days)</div></div>
+  </div>
+
+  <h2 id="date">A1 · Why 7 August - date scoring</h2>
+  <p>Every candidate Friday from June to August was scored 0-10 on five weighted factors. For a star-light, content-driven thriller, <strong>competition clearance</strong> and <strong>screen runway</strong> dominate, because losing screens kills word-of-mouth before it compounds.</p>
+  <div class="card"><canvas id="scoreChart" height="150"></canvas>
+    <div class="legend">Weighted score /100. Green = release zone · Amber = workable · Red = avoid. Weights: Competition 30% · Runway 20% · Holiday 20% · Thematic resonance 15% · Season/spend 15%.</div></div>
+  <div class="card"><table id="scoreTable"><thead><tr>
+      <th>Release Friday</th><th>Verdict</th><th>Comp.</th><th>Runway</th><th>Holiday</th><th>Theme</th><th>Season</th><th>Score</th><th></th>
+    </tr></thead><tbody></tbody></table>
+    <div class="legend">"Theme" = thematic resonance for a patriotic real-incident cop drama (Independence Day weekend over-indexes). Higher is better on every column.</div></div>
+
+  <h2 id="field">A2 · The competitive field, Jun-Aug 2026</h2>
+  <div class="grid2">
+    <div>
+      <p>July is bracketed by two screen-dominating tentpoles - <strong>Vishwambhara</strong> (Chiranjeevi, ₹200 cr+, eyeing 9-10 Jul) and <strong>Jailer 2</strong> (Rajinikanth). August's anchor is <strong>The Paradise</strong> (Nani, 21 Aug), then <em>Bhogi</em> (Sharwanand, 28 Aug) and Ravi Teja's <em>Irumudi</em>.</p>
+      <p>Two clean corridors remain: <strong>late June</strong> (open field, but no holiday and monsoon onset) and <strong>early August (7 Aug)</strong> - after July's giants fade, before <em>The Paradise</em>. Black Gold belongs in the 7 Aug corridor.</p>
+    </div>
+    <div class="tl">
+      <div class="ev"><div class="d">Late June</div><div class="t">Open field · no clash · monsoon begins</div></div>
+      <div class="ev big"><div class="d">9-10 Jul - Vishwambhara ⚠ + Jailer 2</div><div class="t">Screen + media blackout</div></div>
+      <div class="ev big"><div class="d">17 Jul - Telugu Abbayi Gujarat Ammayi</div><div class="t">Holdovers dominant</div></div>
+      <div class="ev big"><div class="d">24 Jul - Romeo Juliet</div><div class="t">Screens recovering</div></div>
+      <div class="ev win"><div class="d">7 Aug - BLACK GOLD ✓</div><div class="t">Bonalu + Independence weekends ahead</div></div>
+      <div class="ev big"><div class="d">21 Aug - The Paradise (Nani)</div><div class="t">Screen takeover</div></div>
+      <div class="ev big"><div class="d">28 Aug - Bhogi (Sharwanand)</div><div class="t">+ Paradise holdover</div></div>
+    </div>
+  </div>
+
+  <h2 id="global">A2b · Wider release slate (global + Hindi), for noting</h2>
+  <p>Beyond Telugu films, these global (Hollywood) and Hindi titles release in Indian theatres across the window. For a Telugu audience in Andhra Pradesh and Telangana they matter mainly as <strong>multiplex screen competition</strong> in Hyderabad and urban AP; single-screen and B/C-centre Telugu footfall is far less affected. The one to watch for the 7 Aug window is <strong>Spider-Man: Brand New Day (31 Jul)</strong>, which will hold multiplex screens into early August.</p>
+  <div class="card"><table>
+    <thead><tr><th>Date</th><th>Title</th><th>Type</th><th>Screen-competition risk for Black Gold</th></tr></thead>
+    <tbody>
+      <tr><td>19 Jun</td><td>Toy Story 5</td><td><span class="chip" style="background:#6a4caf">Hollywood</span></td><td>Low. Family/animation, different audience.</td></tr>
+      <tr><td>3 Jul</td><td>Dhamaal 4</td><td><span class="chip c-f">Hindi</span></td><td>Low in Telugu states.</td></tr>
+      <tr><td>10 Jul</td><td>Moana (live action)</td><td><span class="chip" style="background:#6a4caf">Hollywood</span></td><td>Low-med, and clashes with Vishwambhara week regardless.</td></tr>
+      <tr><td>24 Jul</td><td>Raftaar (Rajkummar Rao, Keerthy Suresh)</td><td><span class="chip c-f">Hindi</span></td><td>Low in Telugu states.</td></tr>
+      <tr class="hot"><td>31 Jul</td><td>Spider-Man: Brand New Day</td><td><span class="chip" style="background:#6a4caf">Hollywood</span></td><td><strong>HIGH (multiplex).</strong> Holds urban screens into Black Gold's opening. Plan multiplex allocation around it.</td></tr>
+      <tr><td>14 Aug</td><td>Bhediya 2 / Naagzilla</td><td><span class="chip c-f">Hindi</span></td><td>Low-med in Telugu states.</td></tr>
+      <tr><td>15 Aug</td><td>Maatrabhumi / Battle of Galwan (Salman Khan)</td><td><span class="chip c-f">Hindi</span></td><td>Med. Independence Day Hindi tentpole; some urban multiplex pull, limited Telugu impact.</td></tr>
+      <tr><td>28 Aug</td><td>Khosla Ka Ghosla 2</td><td><span class="chip c-f">Hindi</span></td><td>Low.</td></tr>
+    </tbody></table>
+    <div class="legend">Telugu tentpoles (Vishwambhara, Jailer 2, The Paradise) remain the primary competition; see A2. All dates are producer/studio announcements and may shift.</div></div>
+  <div class="card" style="border-color:#2a4a63"><strong style="color:var(--blue)">Does this change the date pick?</strong> No. The A1 scoring weighs Telugu tentpoles because they drive Telugu screens and footfall; the global/Hindi titles here mostly affect urban multiplexes. Factoring them in, <strong>7 Aug still ranks first</strong>: Spider-Man (31 Jul) is in its second week by 7 Aug with screens easing, trimming the score only slightly (about 72 to 70). They actually weaken the <em>14 Aug</em> alternative more, since Salman Khan's Independence Day war film plus Bhediya 2 / Naagzilla crowd that weekend and dilute its patriotic angle (about 70 to 62). The one action this adds is tactical: plan multiplex screen allocation around Spider-Man holding urban screens in early August.</div>
+
+  <h2 id="calendar">A3 · Teaser, trailer &amp; asset calendar - dates &amp; times</h2>
+  <p>Every drop sits on India's <strong>highest-engagement days</strong> (Tue/Wed) at an <strong>evening slot (5-6 PM IST)</strong> so it accumulates views into the 7-10 PM prime-time scroll, trends overnight, and gets next-morning trade pickup. The trailer is on a <strong>Friday evening</strong> to ride the weekend. The <code>:05 / :06</code> minute is the Tollywood convention (a memorable timestamp that dodges on-the-hour clutter).</p>
+  <div class="card"><table>
+    <thead><tr><th>Date</th><th>Day</th><th>Time (IST)</th><th>Asset</th><th>Why this slot</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Wed 24 Jun</strong></td><td>Wed</td><td>6:05 PM</td><td>Motion poster + tagline ("Law over the gun")</td><td>Re-engage before July noise; Wed eve = peak engagement.</td></tr>
+      <tr><td><strong>Wed 1 Jul</strong></td><td>Wed</td><td>5:05 PM</td><td>First single (Sam C S)</td><td>Leverage Sam C S's BGM following; banks views before Vishwambhara week.</td></tr>
+      <tr><td style="color:var(--muted)">9-13 Jul</td><td>-</td><td>-</td><td>GO DARK on big drops</td><td>Vishwambhara + Jailer 2 own the cycle. Organic BTS only.</td></tr>
+      <tr class="win"><td><strong>Tue 21 Jul</strong></td><td>Tue</td><td>6:05 PM</td><td>★ TEASER LAUNCH</td><td>First clear day post-Vishwambhara peak; ~17 days pre-release.</td></tr>
+      <tr><td><strong>Tue 28 Jul</strong></td><td>Tue</td><td>5:05 PM</td><td>Second single / "real-events" featurette</td><td>Sustain mid-cycle; deepen the real-incident hook.</td></tr>
+      <tr class="win"><td><strong>Fri 31 Jul</strong></td><td>Fri</td><td>6:05 PM</td><td>★ TRAILER LAUNCH</td><td>Exactly T-7; Friday eve → weekend virality + Sat coverage.</td></tr>
+      <tr><td><strong>Tue 4 Aug</strong></td><td>Tue</td><td>6:30 PM</td><td>Pre-release event (live-streamed)</td><td>Final star moment; clips become next-day Reels/Shorts.</td></tr>
+      <tr><td><strong>Thu 6 Aug</strong></td><td>Thu</td><td>5:05 PM</td><td>"Censor talk" + runtime + cut-down reels</td><td>Last-mile conviction one day before release.</td></tr>
+      <tr class="win"><td><strong>Fri 7 Aug</strong></td><td>Fri</td><td>9:00 AM</td><td>🎬 THEATRICAL RELEASE</td><td>Morning shows → Bonalu &amp; Independence long weekends ahead.</td></tr>
+    </tbody></table>
+    <div class="legend">Pan-India: launch each asset simultaneously across the five language label channels; lead Telugu on Aditya Music.</div></div>
+  <div class="grid2">
+    <div class="card"><canvas id="hourChart" height="170"></canvas>
+      <div class="legend">Relative Indian audience activity by hour (IST). Evening 6-10 PM is the deep-engagement window - assets dropped at 5-6 PM ride the full curve.</div></div>
+    <div class="card"><canvas id="dayChart" height="170"></canvas>
+      <div class="legend">Relative engagement by weekday in India (2026 data). Tue/Wed lead; Friday chosen for the trailer to capture the weekend.</div></div>
+  </div>
+
+  <h2 id="buzz">A4 · Buzz plays - specific to Black Gold</h2>
+  <p>Built off what the film actually is - a real-incident coal-mafia story with a female officer at its centre - not generic "post a poster" tactics.</p>
+  <div class="play"><h3>① "Based on real events" investigative drop</h3>Release a 3-4 min docu-style short on the real illegal-coal economy of the Singareni / Mancherial-Kothagudem belt, ending on "…this is the world Black Gold walks into." Truth grounds the fiction and generates <em>earned</em> media.<div class="who"><span class="tag">True-crime YouTubers</span><span class="tag">Investigative journalists</span><span class="tag">Regional news desks</span></div></div>
+  <div class="play"><h3>② "Women in Khaki" featurette</h3>A short tying Samyuktha's cop to the real work of women police officers. Converts the character into a real-world conversation and unlocks women's networks and IPS-officer reach.
+    <p style="margin:9px 0 0;font-size:13px;color:#cdd3dd"><strong style="color:var(--gold2)">Real local anchor: IPS B. Sumathi.</strong> Hyderabad's first woman Malkajgiri Police Commissioner went viral in May 2026 for a midnight undercover safety check in Dilsukhnagar, and is credited with persuading 591 Maoists to surrender through dialogue rather than force. Her "law over the gun" approach mirrors the film's protagonist almost exactly, and the story is rooted in Telangana, the home market. Frame any tie-in as a <strong>women-safety awareness collaboration or thematic tribute, not a commercial endorsement</strong> (serving officers cannot endorse films), and it earns strong, locally-credible coverage.</p>
+    <div class="who"><span class="tag">IPS B. Sumathi (real tie-in)</span><span class="tag">Women's collectives</span><span class="tag">Police-women features</span><span class="tag">Lifestyle &amp; news pages</span></div></div>
+  <div class="play"><h3>③ Own the coal belt (home-market depth)</h3>Promo events and previews in coal-belt towns (Mancherial, Kothagudem, Ramagundam, Godavarikhani). Authentic Telangana grounding where the story is set - local press loves a hometown story.<div class="who"><span class="tag">Singareni worker communities</span><span class="tag">District press</span><span class="tag">Local theatre owners</span></div></div>
+  <div class="play"><h3>④ Sam C S "BGM reveal" reel series</h3>Sam C S (Vikram Vedha) has a pan-India following for background scores. A "BGM reveal" reel format consistently over-performs and travels across language audiences.<div class="who"><span class="tag">Music label channels</span><span class="tag">Film-music pages</span><span class="tag">Sam C S fan accounts</span></div></div>
+  <div class="play"><h3>⑤ Independence-Day patriotic wave (week 2)</h3>Release is 7 Aug, so Independence Day (15 Aug) lands in week 2. Run a "serve the nation in khaki" creative wave around 13-16 Aug to re-spike footfall - a built-in second launch.<div class="who"><span class="tag">National-sentiment pages</span><span class="tag">Theatre re-push</span></div></div>
+  <div class="play"><h3>⑥ Lean hard on Samyuktha's Malayalam base</h3>Samyuktha is a Mollywood star with strong Kerala goodwill; the Malayalam version is a genuine asset. Over-invest in Malayalam media, reviewers and her fanbase for a multiplier the Telugu-only competition can't match.<div class="who"><span class="tag">Malayalam film media</span><span class="tag">Kerala reviewers</span><span class="tag">Samyuktha fan pages</span></div></div>
+  <div class="play"><h3>⑦ "Law over the gun" hashtag &amp; debate hook</h3>A sharp tagline campaign (<code>#LawOverTheGun</code>) framed as a question on corruption and courage - debate-bait that pages and creators amplify for free.<div class="who"><span class="tag">Opinion / debate pages</span><span class="tag">Quote-card creators</span></div></div>
+
+  <h2 id="outreach">A5 · Who to reach out to - real, tiered list</h2>
+  <p class="note">Handles marked <span class="pill p-v">verified</span> were confirmed during research (and several reappear with real engagement in Part B). Others are well-known real entities whose exact handle should be re-confirmed. Approach with assets + access, not cash-for-praise.</p>
+  <div class="grid2">
+    <div class="card"><h3>A · Telugu trade &amp; news (home market)</h3><ul>
+      <li><strong>123telugu</strong> - X <code>@123telugu</code> <span class="pill p-v">verified</span></li>
+      <li><strong>GreatAndhra</strong> - X <code>@greatandhranews</code> <span class="pill p-v">verified</span></li>
+      <li><strong>Idlebrain (Jeevi)</strong> - <code>@idlebrainjeevi</code> <span class="pill p-v">verified</span> · covered the first look (4.2K views).</li>
+      <li><strong>Tupaki, Gulte, Cinejosh, Telugu360, TeluguOne</strong> - core Telugu network.</li>
+    </ul></div>
+    <div class="card"><h3>B · Trailer &amp; music platforms</h3><ul>
+      <li><strong>Aditya Music</strong> - YouTube, 36 M+ subs <span class="pill p-v">verified</span> · lead Telugu host.</li>
+      <li><strong>Saregama Telugu, Mango Music</strong> - added Telugu reach.</li>
+      <li><strong>Per-language labels</strong> - Hindi/Tamil/Malayalam/Kannada cuts on the dominant label per market.</li>
+    </ul></div>
+    <div class="card"><h3>C · Pan-India / Hindi trade ★</h3><ul>
+      <li><strong>Taran Adarsh</strong> - <code>@taran_adarsh</code> <span class="pill p-v">verified</span> · his single post = ~73% of the film's X reach (see Part B). Highest-leverage handle.</li>
+      <li><strong>Komal Nahta</strong> - X <code>@KomalNahta</code> <span class="pill p-v">verified</span> · 8.2K-view post; national trade.</li>
+    </ul></div>
+    <div class="card"><h3>D · Reviewers / creator-influencers</h3><ul>
+      <li>Telugu YouTube reviewers (<strong>Thyview</strong>, <strong>Mahidhar Vibes</strong>, <strong>Tupaki Reviews</strong>) - verify reach first.</li>
+      <li>Thematic <strong>true-crime</strong> &amp; <strong>women-empowerment</strong> pages.</li>
+      <li><strong>Samyuktha's own</strong> <code>@iamsamyuktha_</code> - highest-trust channel you control.</li>
+    </ul></div>
+  </div>
+
+  <h2 id="influencers">A5b · Key influencers to engage, by platform</h2>
+  <p>Who to activate on each platform, with their role and the asset that gets the best out of them. Handles tagged <span class="pill p-v">verified</span> were confirmed in the live X pull or research; others are well-known real accounts whose current reach should be re-confirmed before outreach.</p>
+  <div class="grid3">
+    <div class="card"><h3><span class="chip c-x">Twitter / X</span> Reach engine, brief first</h3><ul>
+      <li><strong>@taran_adarsh</strong> <span class="pill p-v">verified</span> national trade. Drove 172K views on this film; give the teaser and trailer exclusive first.</li>
+      <li><strong>@KomalNahta</strong> <span class="pill p-v">verified</span> national trade, key for the Hindi version.</li>
+      <li><strong>@idlebrainjeevi</strong> <span class="pill p-v">verified</span> Telugu trade (Idlebrain); covered the first look.</li>
+      <li><strong>@Telugu360</strong> <span class="pill p-v">verified</span> Telugu news; drove 12K on first look.</li>
+      <li><strong>@123telugu</strong> / <strong>@greatandhranews</strong> <span class="pill p-v">verified</span> Telugu news and reviews.</li>
+      <li><strong>@TheAakashavaani</strong> <span class="pill p-v">verified</span> aggregator; its first-look post hit 18K (top wave-1).</li>
+      <li><strong>Gulte, Tupaki, Cinejosh</strong> portals for sustained coverage.</li>
+    </ul></div>
+    <div class="card"><h3><span class="chip c-y">YouTube</span> Video + reviews</h3><ul>
+      <li><strong>Aditya Music</strong> <span class="pill p-v">verified</span> 36M+ subs; lead host for the Telugu trailer and songs.</li>
+      <li><strong>Mango Music, Saregama Telugu</strong> additional Telugu music/video reach.</li>
+      <li><strong>Naatu Cinema</strong> covered the shoot wrap; news/update reach.</li>
+      <li><strong>Thyview, Tupaki Reviews, Mahidhar Vibes</strong> reviewer channels; seed honest post-release reviews (verify reach first).</li>
+      <li><strong>Per-language labels</strong> host the Hindi / Tamil / Malayalam / Kannada cuts on the dominant label per market.</li>
+    </ul></div>
+    <div class="card"><h3><span class="chip" style="background:#c13584">Instagram</span> Reels + fan-building</h3><ul>
+      <li><strong>@iamsamyuktha_</strong> <span class="pill p-v">verified</span> the star's own handle; highest-trust channel, her reels carry the most.</li>
+      <li><strong>123telugu, Telugu360, Gulte (IG)</strong> reel and poster amplification on their Instagram pages.</li>
+      <li><strong>Reel / edit &amp; BGM creators</strong> for the "intense cop" cuts and Sam C S BGM reels (the format that travels).</li>
+      <li><strong>Women-empowerment &amp; true-crime pages</strong> thematic fit for the real-events hook.</li>
+      <li><strong>Emerging Samyuktha fan pages</strong> seed them assets early; a base is already forming.</li>
+    </ul></div>
+  </div>
+  <div class="card" style="border-color:#2a4a63"><strong style="color:var(--blue)">Engagement principle:</strong> lead with <strong>access</strong> (set visits, exclusive clips, interviews), not cash-for-praise. The data shows trade handles already chose to back this film, so authentic amplification is available and far more durable than paid hype, which audiences punish on a message-driven film.</div>
+
+  <h2 id="risks">A6 · Risks &amp; what to re-check</h2>
+  <div class="card"><ul>
+    <li><strong>Competitor dates shift constantly.</strong> Re-confirm Vishwambhara, Jailer 2 and The Paradise 4-6 weeks before locking. If any moves into early August, re-run the scoring.</li>
+    <li><strong>One-week runway risk (14 Aug).</strong> Choose it only if confident of a strong opening, since The Paradise reclaims screens 21 Aug.</li>
+    <li><strong>Monsoon.</strong> Jul-Aug rain softens walk-ins; weight pre-booking + digital conviction.</li>
+    <li><strong>"Real events" sensitivity.</strong> A coal-syndicate-and-CM storyline can invite legal/political pushback - keep disclaimers tight.</li>
+    <li><strong>Influencer authenticity.</strong> Favour genuine access over paid praise; audiences punish bought hype on a "message" film.</li>
+  </ul></div>
+
+  <!-- ================= PART B ================= -->
+  <hr class="part-divider">
+  <div class="part-head">Part B - Social buzz history (X &amp; Reddit)</div>
+  <p class="sub" style="margin-top:6px">Captured 5 Jun 2026 · X pulled live from an authenticated session (real view/like/repost counts) · Reddit from public search indexing only.</p>
+
+  <div class="keybox"><strong>The one finding that matters:</strong> a single post from trade analyst <strong>Taran Adarsh</strong> (1 Jan 2026) drew <strong>172,182 views</strong> - roughly <strong>73% of all the film's visible reach on X across eight months</strong>. The Black Gold's organic footprint is almost entirely <em>trade-amplified</em>, not fan-driven. Whoever gets the teaser and trailer first should be that same trade tier.</div>
+
+  <div class="grid4">
+    <div class="stat"><div class="n">~235K</div><div class="l">Total visible X views (8 mo)</div></div>
+    <div class="stat"><div class="n">172K</div><div class="l">Top post (Taran Adarsh, 1 Jan)</div></div>
+    <div class="stat"><div class="n">73%</div><div class="l">Reach from that one post</div></div>
+    <div class="stat"><div class="n">4 waves</div><div class="l">+ a declining trend</div></div>
+  </div>
+
+  <div class="warnbox"><strong>Method &amp; limits.</strong> X figures are <strong>real</strong>, pulled live from the authenticated timeline (exact views/likes/reposts). Coverage is the set of posts X search surfaced for "The Black Gold" + #TheBlackGold - broad but not a complete census.</div>
+
+  <h2 id="s-timeline">B1 · Reach by month - buzz is declining wave-over-wave</h2>
+  <p>Four event-driven spikes, and the trend after January is <strong>down</strong>, not up - the shoot-wrap (Apr) generated 36× less reach than the New Year posters (Jan). For a film ~3 months from release, momentum should be building. The teaser/trailer must reverse this.</p>
+  <div class="card"><canvas id="timeline" height="150"></canvas>
+    <div class="legend">Total X views per month (real). Jan is inflated by one Taran Adarsh post; even so, every later beat underperformed badly.</div></div>
+  <div class="grid4">
+    <div class="card"><h3>Wave 1 · First Look</h3><p class="sub">19-22 Oct 2025</p><p><strong>~42,000 views</strong>. @TheAakashavaani (18.1K), Telugu360 (12K), Idlebrain Jeevi (4.2K), Tamil via news7tamil (4.4K).</p>
+      <div class="wbtns">
+        <a class="wbtn" href="https://x.com/123telugu/status/1980137734690988129" target="_blank" rel="noopener">@123telugu first look</a>
+        <a class="wbtn alt" href="https://x.com/news7tamil/status/1980254913293631717" target="_blank" rel="noopener">@news7tamil</a>
+      </div></div>
+    <div class="card"><h3>Wave 2 · Pan-India posters ★</h3><p class="sub">1-4 Jan 2026</p><p><strong>~182,000 views</strong>. Taran Adarsh (172K) + Komal Nahta (8.2K). The peak - almost all of it two trade handles.</p>
+      <div class="wbtns">
+        <a class="wbtn" href="https://x.com/taran_adarsh/status/2006600586431705433" target="_blank" rel="noopener">@taran_adarsh · 172K</a>
+        <a class="wbtn alt" href="https://x.com/DheerajHQ/status/2006601662857875715" target="_blank" rel="noopener">@DheerajHQ</a>
+      </div></div>
+    <div class="card"><h3>Wave 3 · Shoot wrap</h3><p class="sub">27 Apr 2026</p><p><strong>~5,100 views</strong>. LetsXOtt (4.1K) carried it; everyone else &lt;500. Weak for a "milestone".</p>
+      <div class="wbtns">
+        <a class="wbtn" href="https://x.com/LetsXOtt/status/2048643860159766992" target="_blank" rel="noopener">@LetsXOtt · 4.1K</a>
+        <a class="wbtn alt" href="https://x.com/123telugu/status/2048667790102704220" target="_blank" rel="noopener">@123telugu</a>
+      </div></div>
+    <div class="card"><h3>Wave 4 · Pre-release simmer</h3><p class="sub">31 May - 3 Jun 2026</p><p><strong>~2,600 views</strong>. Aggregators (actresswoods 1.4K, Weekendvibes_ 1.2K) + first fan account. Small base forming.</p>
+      <div class="wbtns">
+        <a class="wbtn" href="https://x.com/actresswoods/status/2061108859662713036" target="_blank" rel="noopener">@actresswoods</a>
+        <a class="wbtn alt" href="https://x.com/Weekendvibes_/status/2061804757543727234" target="_blank" rel="noopener">@Weekendvibes_</a>
+        <a class="wbtn alt" href="https://x.com/Sammyy_bts/status/2062214270084087953" target="_blank" rel="noopener">@Sammyy_bts (fan)</a>
+      </div></div>
+  </div>
+  <div class="card" style="border-color:#7a3b16"><strong style="color:var(--warn)">⚠ The Women's Day miss.</strong> The 8 Mar Women's Day poster - thematically perfect for a female-cop film - generated only <strong>~580 views</strong> across the posts captured. A tailor-made beat went under-amplified. Don't repeat that with the teaser.</div>
+
+  <h2 id="s-reach">B2 · Where the reach actually comes from</h2>
+  <div class="grid2">
+    <div class="card"><canvas id="concentration" height="190"></canvas>
+      <div class="legend">Share of total X views. Three posts (all trade/large pages) = ~86% of reach. 25+ posts split the remaining 14%.</div></div>
+    <div class="card"><h3>Read-through</h3><ul>
+      <li><strong>Trade analysts are the channel</strong>, not fans. Taran Adarsh + Komal Nahta + Idlebrain Jeevi = the reach engine.</li>
+      <li><strong>Engagement quality is good where it lands:</strong> 2-3% like-rates on TheAakashavaani (434/18K) and Idlebrain (118/4.2K) - genuine interest, not bots.</li>
+      <li><strong>Tamil/Malayalam crossover is real but thin</strong> (news7tamil 4.4K) - pan-India framing landing, under-exploited.</li>
+    </ul></div>
+  </div>
+
+  <h2 id="s-posts">B3 · Every X post captured, ranked by reach</h2>
+  <div class="card"><table>
+    <thead><tr><th>#</th><th>Account</th><th>Date</th><th class="num">Views</th><th class="num">Likes</th><th class="num">Reposts</th><th>Wave</th></tr></thead>
+    <tbody>
+      <tr class="hot"><td>1</td><td>@taran_adarsh <span class="chip c-x">trade</span></td><td>1 Jan 26</td><td class="num">172,182</td><td class="num">1,503</td><td class="num">71</td><td>2 ★</td></tr>
+      <tr class="hot"><td>2</td><td>@TheAakashavaani</td><td>20 Oct 25</td><td class="num">18,107</td><td class="num">434</td><td class="num">21</td><td>1</td></tr>
+      <tr class="hot"><td>3</td><td>@Telugu360 <span class="chip c-x">news</span></td><td>20 Oct 25</td><td class="num">11,988</td><td class="num">95</td><td class="num">4</td><td>1</td></tr>
+      <tr><td>4</td><td>@KomalNahta <span class="chip c-x">trade</span></td><td>1 Jan 26</td><td class="num">8,206</td><td class="num">68</td><td class="num">4</td><td>2</td></tr>
+      <tr><td>5</td><td>@news7tamil <span class="chip c-x">Tamil</span></td><td>20 Oct 25</td><td class="num">4,427</td><td class="num">32</td><td class="num">1</td><td>1</td></tr>
+      <tr><td>6</td><td>@idlebrainjeevi <span class="chip c-x">trade</span></td><td>20 Oct 25</td><td class="num">4,167</td><td class="num">118</td><td class="num">5</td><td>1</td></tr>
+      <tr><td>7</td><td>@LetsXOtt</td><td>27 Apr 26</td><td class="num">4,119</td><td class="num">121</td><td class="num">15</td><td>3</td></tr>
+      <tr><td>8</td><td>@actresswoods</td><td>31 May 26</td><td class="num">1,407</td><td class="num">38</td><td class="num">6</td><td>4</td></tr>
+      <tr><td>9</td><td>@123telugu <span class="chip c-x">news</span></td><td>19 Oct 25</td><td class="num">1,299</td><td class="num">5</td><td class="num">1</td><td>1</td></tr>
+      <tr><td>10</td><td>@Weekendvibes_</td><td>2 Jun 26</td><td class="num">1,156</td><td class="num">51</td><td class="num">4</td><td>4</td></tr>
+      <tr><td>11</td><td>@DheerajHQ</td><td>1 Jan 26</td><td class="num">1,001</td><td class="num">-</td><td class="num">1</td><td>2</td></tr>
+      <tr><td>12</td><td>@123telugu</td><td>20 Oct 25</td><td class="num">953</td><td class="num">7</td><td class="num">-</td><td>1</td></tr>
+      <tr><td>13</td><td>@123telugu</td><td>20 Oct 25</td><td class="num">745</td><td class="num">4</td><td class="num">-</td><td>1</td></tr>
+      <tr><td>14</td><td>@Arunpankar27</td><td>1 Jan 26</td><td class="num">560</td><td class="num">1</td><td class="num">1</td><td>2</td></tr>
+      <tr><td>15</td><td>@SanjaySanj71997</td><td>27 Apr 26</td><td class="num">347</td><td class="num">1</td><td class="num">-</td><td>3</td></tr>
+      <tr><td>16</td><td>@guptanagu8</td><td>8 Mar 26</td><td class="num">342</td><td class="num">3</td><td class="num">-</td><td>WD</td></tr>
+      <tr><td>17</td><td>@imjadhavtushar</td><td>1 Jan 26</td><td class="num">278</td><td class="num">2</td><td class="num">1</td><td>2</td></tr>
+      <tr><td>18</td><td>@bnaveenkalyan1</td><td>22 Oct 25</td><td class="num">253</td><td class="num">2</td><td class="num">-</td><td>1</td></tr>
+      <tr><td>19</td><td>@suyashpachauri</td><td>4 Jan 26</td><td class="num">200</td><td class="num">4</td><td class="num">3</td><td>2</td></tr>
+      <tr><td>20</td><td>@123telugu</td><td>27 Apr 26</td><td class="num">428</td><td class="num">2</td><td class="num">-</td><td>3</td></tr>
+      <tr><td colspan="7" style="color:var(--muted);font-size:12px">+ 8 more small posts (SinghZeldon, TrendSniper01, TeluguTimesNews, BigtvCinema, AgentAthreyatfi, thetelugucinema, VisualDrops_, Telugu_Fusion, telugumopo, Sammyy_bts) - each &lt;165 views.</td></tr>
+    </tbody></table></div>
+
+  <h2 id="s-do">B4 · What the data says to do</h2>
+  <div class="grid2">
+    <div class="card"><h3 class="s-pos">Working</h3><ul>
+      <li><strong>Tier-1 trade bought in</strong> - Taran Adarsh, Komal Nahta, Idlebrain Jeevi posted positively. Rare for a heroine-led film; it's the asset.</li>
+      <li><strong>Healthy like-rates</strong> (2-3%) where posts have real audiences.</li>
+      <li><strong>"Intense / raw / power of a woman"</strong> avatar drove the positive reactions.</li>
+      <li><strong>A fan base is starting</strong> - first dedicated fan account + aggregators in late May/June.</li>
+    </ul></div>
+    <div class="card"><h3 class="s-mix">To fix</h3><ul>
+      <li><strong>Declining momentum</strong> - each wave smaller than the last.</li>
+      <li><strong>Over-reliance on one post</strong> - lose trade amplification and reach collapses ~73%.</li>
+      <li><strong>Premise illegibility</strong> - the visual reads as generic action; the real-events hook isn't landing.</li>
+      <li><strong>Wasted beats</strong> - Women's Day (~580 views) and shoot-wrap (~5K) under-amplified.</li>
+    </ul></div>
+  </div>
+  <div class="card"><ul>
+    <li><strong>Lock the trade tier for teaser &amp; trailer exclusives</strong> (ties to A5-C). They delivered ~80% of reach - brief them first, give the asset early per the 21 Jul / 31 Jul plan.</li>
+    <li><strong>Reverse the decline with video.</strong> Poster beats keep shrinking; the teaser's first-48h views are the go/no-go signal on current marketing.</li>
+    <li><strong>Lead with the true story</strong> - engagement clusters on the avatar/visual, but the premise is the differentiator. Make "based on real coal-syndicate events" the headline of the next reveal.</li>
+    <li><strong>Don't waste another themed beat</strong> - the Women's Day flop is the cautionary tale; every drop needs trade seeding + paid amplification.</li>
+    <li><strong>Feed the emerging fan accounts</strong> and <strong>exploit the Tamil/Malayalam crossover</strong> for a multiplier.</li>
+  </ul></div>
+
+  <footer>
+    <strong>Sources.</strong> Strategy: <a href="https://www.imdb.com/title/tt33772380/">The Black Gold - IMDb</a>, <a href="https://en.wikipedia.org/wiki/List_of_Telugu_films_of_2026">Telugu films 2026 - Wikipedia</a>, <a href="https://telanganatoday.com/chiranjeevi-announces-vishwambhara-to-release-in-summer-2026">Vishwambhara - Telangana Today</a>, <a href="https://www.prokerala.com/festivals/bonalu.html">Bonalu 2026</a>, <a href="https://www.wscubetech.com/blog/instagram-post-time/">Best time to post (India) 2026</a>, <a href="https://kworb.net/youtube/artist/adityamusictelugu.html">Aditya Music stats</a>.
+    Social: live authenticated X pull (<a href="https://x.com/taran_adarsh/status/2006600586431705433">Taran Adarsh top post</a> + @TheAakashavaani, @Telugu360, @KomalNahta, @idlebrainjeevi, @news7tamil, @LetsXOtt, @123telugu, @actresswoods, @Weekendvibes_ &amp; others).
+    <p style="margin-top:10px">X figures are real/exact as displayed in the authenticated timeline (search-surfaced, not a complete census). Decision-support only; not a guarantee of box-office outcome. Re-verify competitor dates and handles before execution. Captured 5 June 2026.</p>
+  </footer>
+</div>
+
+<script>
+// ---- Part A: date scoring ----
+const data=[
+  {d:"12 Jun",v:"ok",c:8,r:7,h:3,s:5,e:4,total:57},{d:"19 Jun",v:"ok",c:8,r:7,h:3,s:5,e:5,total:59},
+  {d:"26 Jun",v:"ok",c:9,r:6,h:3,s:5,e:5,total:60},{d:"3 Jul",v:"no",c:5,r:3,h:3,s:5,e:5,total:42},
+  {d:"10 Jul",v:"no",c:1,r:1,h:3,s:5,e:5,total:26},{d:"17 Jul",v:"no",c:3,r:3,h:3,s:5,e:5,total:36},
+  {d:"24 Jul",v:"no",c:4,r:4,h:3,s:5,e:5,total:41},{d:"31 Jul",v:"ok",c:5,r:5,h:3,s:6,e:6,total:48},
+  {d:"7 Aug",v:"go",c:7,r:7,h:9,s:7,e:6,total:72},{d:"14 Aug",v:"go",c:7,r:4,h:9,s:9,e:6,total:70},
+  {d:"21 Aug",v:"no",c:2,r:3,h:4,s:7,e:6,total:39},{d:"28 Aug",v:"ok",c:3,r:4,h:4,s:6,e:6,total:44}];
+const col=v=>v==="go"?"#e0a92e":v==="ok"?"#f5a623":"#e5484d";
+const pil=v=>v==="go"?'<span class="pill p-go">Release</span>':v==="ok"?'<span class="pill p-ok">Workable</span>':'<span class="pill p-no">Avoid</span>';
+const tb=document.querySelector("#scoreTable tbody");
+data.forEach(x=>{const tr=document.createElement("tr");if(x.v==="go")tr.className="win";
+  tr.innerHTML=`<td><strong>${x.d}</strong></td><td>${pil(x.v)}</td><td>${x.c}</td><td>${x.r}</td><td>${x.h}</td><td>${x.s}</td><td>${x.e}</td><td class="score" style="color:${col(x.v)}">${x.total}</td><td><div class="bar-wrap"><div class="bar" style="width:${x.total}%;background:${col(x.v)}"></div></div></td>`;
+  tb.appendChild(tr);});
+new Chart(document.getElementById("scoreChart"),{type:"bar",
+  data:{labels:data.map(x=>x.d),datasets:[{data:data.map(x=>x.total),backgroundColor:data.map(x=>col(x.v)),borderRadius:5,maxBarThickness:46}]},
+  options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>`Score: ${c.raw}/100`}}},
+    scales:{y:{beginAtZero:true,max:100,grid:{color:"#282c36"},ticks:{color:"#98a1b0"},title:{display:true,text:"Weighted score /100",color:"#98a1b0"}},x:{grid:{display:false},ticks:{color:"#cdd3dd"}}}}});
+
+const hours=["6a","8a","10a","12p","2p","4p","5p","6p","7p","8p","9p","10p","11p","12a"];
+new Chart(document.getElementById("hourChart"),{type:"line",
+  data:{labels:hours,datasets:[{label:"Audience activity (IST)",data:[10,22,35,42,40,50,62,78,90,100,96,82,55,30],borderColor:"#e0a92e",backgroundColor:"rgba(224,169,46,.15)",fill:true,tension:.4,pointRadius:0}]},
+  options:{plugins:{legend:{labels:{color:"#cdd3dd"}}},scales:{y:{beginAtZero:true,max:110,grid:{color:"#282c36"},ticks:{color:"#98a1b0"}},x:{grid:{display:false},ticks:{color:"#98a1b0",maxRotation:0}}}}});
+new Chart(document.getElementById("dayChart"),{type:"bar",
+  data:{labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],datasets:[{data:[78,95,100,84,88,72,70],backgroundColor:["#3a3f4a","#e0a92e","#e0a92e","#3a3f4a","#5b9cf5","#3a3f4a","#3a3f4a"],borderRadius:5}]},
+  options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,max:110,grid:{color:"#282c36"},ticks:{color:"#98a1b0"}},x:{grid:{display:false},ticks:{color:"#cdd3dd"}}}}});
+
+// ---- Part B: social ----
+new Chart(document.getElementById("timeline"),{type:"bar",
+  data:{labels:["Oct'25","Nov'25","Dec'25","Jan'26","Feb'26","Mar'26","Apr'26","May'26","Jun'26"],
+    datasets:[{label:"X views (real)",data:[42164,0,0,182516,101,742,5092,1407,1172],backgroundColor:["#3a5a7a","#3a5a7a","#3a5a7a","#e0a92e","#3a5a7a","#3a5a7a","#3a5a7a","#3a5a7a","#3a5a7a"],borderRadius:5}]},
+  options:{plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.raw.toLocaleString()+" views"}}},
+    scales:{y:{beginAtZero:true,grid:{color:"#282c36"},ticks:{color:"#98a1b0",callback:v=>v/1000+"K"},title:{display:true,text:"X views",color:"#98a1b0"}},x:{grid:{display:false},ticks:{color:"#cdd3dd"}}}}});
+new Chart(document.getElementById("concentration"),{type:"doughnut",
+  data:{labels:["Taran Adarsh (1 post)","TheAakashavaani","Telugu360","All other 25 posts"],
+    datasets:[{data:[172182,18107,11988,32500],backgroundColor:["#e0a92e","#1d9bf0","#5b9cf5","#3a3f4a"],borderColor:"#16181d",borderWidth:2}]},
+  options:{plugins:{legend:{position:"bottom",labels:{color:"#cdd3dd",padding:10,font:{size:11.5}}},tooltip:{callbacks:{label:c=>c.label+": "+c.raw.toLocaleString()+" views"}}},cutout:"58%"}});
+</script>
+</body>
+</html>
