@@ -1,0 +1,60 @@
+{
+  "x_direct_replies": {
+    "opinion_bearing_n": 34,
+    "excluded_n": 27,
+    "excluded_reason": "pure Spirit/Prabhas or other-film asks, spam, or empty-text replies carry no opinion on the trailer and are excluded, matching the Part B method",
+    "counts": {
+      "positive": 14,
+      "negative": 16,
+      "neutral": 4
+    },
+    "pct": {
+      "positive": 41.2,
+      "negative": 47.1,
+      "neutral": 11.8
+    }
+  },
+  "youtube_comments": {
+    "reviewed_n": 163,
+    "reviewed_of_total": 392,
+    "reviewed_like_share_pct": 99.2,
+    "counts": {
+      "negative": 86,
+      "positive": 19,
+      "neutral": 58
+    },
+    "pct": {
+      "negative": 52.8,
+      "positive": 11.7,
+      "neutral": 35.6
+    },
+    "caution": "Count-based split among the highest-engagement comments reviewed (99% of total comment likes). Do not read this as '88% of viewers' - YouTube's default Top sort concentrates likes on a handful of comments; the like-weighted figure describes the most-visible comments, not the full audience."
+  },
+  "reddit": {
+    "threads": [
+      {
+        "subreddit": "r/tollywood",
+        "title": "Romanchakam Trailer - Sandeep Reddy Vanga | Sumanth Prabhas | Ananthika | Venu | Vasuki | Pranay",
+        "upvote_ratio": 0.38,
+        "num_comments": 8,
+        "sample_comments": [
+          "Trailer ni kuda skip chesi chuse la chesaru (Made me want to skip even the trailer)",
+          "idhi asalu trailer ey kastam ga undhi (This trailer itself is hard to sit through)",
+          "Rotha la undi. But lately Abbavaram cinema lanti chetta ni hit chesaru manollu (Trashy - but we've hit-ed worse recently too)",
+          "Teaser was better"
+        ]
+      },
+      {
+        "subreddit": "r/Movies___Series",
+        "title": "Romanchakam - Random Scenes & Emotions..... Poor Trailer Cut",
+        "upvote_ratio": 0.76,
+        "num_comments": 4,
+        "op_excerpt": "Chemistry is good. Trailer cut is so poor. No proper conveying an emotion other than comedy bits. No natural flow of the trailer.",
+        "sample_comments": [
+          "Didn't excite much but trusting production house.",
+          "Nothing looks new."
+        ]
+      }
+    ]
+  }
+}

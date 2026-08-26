@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romanchakam &middot; Trailer Reception Report</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316181d'/%3E%3Crect x='4' y='12' width='24' height='15' rx='2' fill='%23e0a92e'/%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Crect x='4' y='5' width='24' height='7' rx='1.5'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Crect x='4' y='5' width='24' height='7' fill='%231d2027'/%3E%3Cg fill='%23f5c451'%3E%3Cpolygon points='4,12 8,12 14,5 10,5'/%3E%3Cpolygon points='12,12 16,12 22,5 18,5'/%3E%3Cpolygon points='20,12 24,12 30,5 26,5'/%3E%3Cpolygon points='28,12 32,12 38,5 34,5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#14101d; --card:#221a33; --card2:#2b2140; --border:#3a2c52;
+  --text:#f5f0fb; --muted:#b1a4c8; --soft:#8d80a8;
+  --pink:#ff5d8f; --gold:#ffd166; --violet:#9b7be8; --teal:#33c9b7;
+  --green:#4ad295; --red:#ff6b6b; --orange:#ffa94d;
+  --grad:linear-gradient(90deg,#ff5d8f,#ffa94d,#ffd166,#4ad295,#33c9b7,#9b7be8);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:radial-gradient(1100px 520px at 50% -8%,#2a1b40 0%,var(--bg) 55%);color:var(--text);line-height:1.55;}
+.wrap{max-width:1140px;margin:0 auto;padding:26px 20px 64px;}
+.eyebrow{color:var(--soft);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;text-align:center;}
+.title{text-align:center;font-size:clamp(34px,6vw,60px);font-weight:800;letter-spacing:1px;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-top:2px;}
+.subhead{text-align:center;color:var(--muted);font-size:14.5px;margin-top:6px;}
+.linkline{text-align:center;color:var(--soft);font-size:12.5px;margin-top:8px;}
+.linkline a{color:var(--teal);}
+
+.exec{margin-top:24px;background:linear-gradient(135deg,#241a38,#2c2142);border:1px solid var(--border);border-radius:18px;padding:26px 28px;}
+.exec .lab{color:var(--gold);font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;}
+.exec .take{font-size:19px;line-height:1.55;margin-top:8px;font-weight:500;}
+.exec .take b{color:var(--pink);}
+.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px;}
+@media(max-width:780px){.chips{grid-template-columns:1fr 1fr;}}
+.chip{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;}
+.chip .n{font-size:25px;font-weight:800;color:var(--gold);}
+.chip .n.pink{color:var(--pink);}.chip .n.violet{color:var(--violet);}.chip .n.teal{color:var(--teal);}.chip .n.red{color:var(--red);}
+.chip .t{color:var(--muted);font-size:11.5px;margin-top:3px;}
+
+h2.sec{font-size:21px;font-weight:700;margin:40px 0 14px;display:flex;align-items:center;gap:10px;}
+h2.sec:before{content:"";width:6px;height:24px;border-radius:4px;background:var(--grad);}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:820px){.two{grid-template-columns:1fr;}}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media(max-width:900px){.three{grid-template-columns:1fr;}}
+.cardbox{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;}
+.cardbox h3{font-size:16px;}
+.cardbox p.note{color:var(--soft);font-size:12px;margin:4px 0 14px;}
+.chart-box{position:relative;height:290px;}
+
+.callout{background:linear-gradient(135deg,#1c2b2a,#222a3a);border:1px solid var(--teal);border-left:6px solid var(--teal);border-radius:14px;padding:22px 26px;margin-top:16px;}
+.callout h3{color:var(--teal);font-size:18px;margin-bottom:8px;}
+.callout p{font-size:15px;}
+.callout .big{font-size:26px;font-weight:800;color:var(--teal);}
+.callout.warn{border-color:var(--red);background:linear-gradient(135deg,#2b1c22,#241a2f);}
+.callout.warn h3{color:var(--red);}
+.callout.gold{border-color:var(--gold);background:linear-gradient(135deg,#2a2418,#222a3a);}
+.callout.gold h3{color:var(--gold);}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;}
+th{background:var(--card2);color:var(--gold);text-align:left;padding:11px 14px;font-size:12px;text-transform:uppercase;letter-spacing:.5px;}
+td{padding:11px 14px;border-top:1px solid var(--border);vertical-align:top;}
+.handle{color:var(--violet);font-weight:600;white-space:nowrap;}
+.pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:10.5px;font-weight:700;text-transform:uppercase;white-space:nowrap;}
+.pill.pos{background:rgba(74,210,149,.18);color:var(--green);}
+.pill.neu{background:rgba(255,209,102,.18);color:var(--gold);}
+.pill.neg{background:rgba(255,107,107,.18);color:var(--red);}
+td.num{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap;}
+
+.recs li{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--violet);border-radius:10px;padding:14px 18px;margin-bottom:10px;list-style:none;font-size:14.5px;}
+.recs li b{color:var(--gold);}
+.watch li{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:10px;padding:13px 18px;margin-bottom:9px;list-style:none;font-size:14px;color:var(--muted);}
+.watch li b{color:var(--text);}
+
+.footer{margin-top:38px;padding:22px 24px;border-radius:14px;background:var(--card);border:1px solid var(--border);color:var(--muted);font-size:13px;}
+.footer b{color:var(--text);}
+.footer .row{margin-bottom:6px;}
+.check{color:var(--green);}
+a{color:var(--teal);}
+.barlabel{font-size:11px;fill:var(--muted);}
+.legend{color:var(--soft);font-size:12px;margin-top:10px;}
+.src{display:inline-block;font-size:11px;background:var(--card2);border:1px solid var(--border);color:var(--muted);border-radius:5px;padding:2px 8px;margin:2px 4px 0 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Trailer Reception Report &middot; for the Romanchakam team</div>
+  <div class="title">Romanchakam</div>
+  <div class="subhead">Trailer dropped 25 Aug 2026, 8:10 PM IST &middot; in cinemas 3 September 2026 &middot; presented by Sandeep Reddy Vanga</div>
+  <div class="linkline">Trailer: <a href="https://youtu.be/c5IXkos5XMI" target="_blank" rel="noopener noreferrer">youtu.be/c5IXkos5XMI</a> &middot; captured through 26 Aug 2026 evening IST (~T+22-28h) &middot; companion to the <a href="../romanchakam-analysis/">Part A/B first-look report</a></div>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <div class="exec">
+    <div class="lab">The one thing to take away</div>
+    <div class="take">Reach is strong - <b>600K+ YouTube views</b> and <b>1.5M+ cumulative X impressions</b> in a day - and the <b>press/PR layer reads positive</b> by construction. But strip that out and look at <b>unprompted reaction</b> (X replies, YouTube comments, Reddit): it is a near coin-flip on X and <b>leans negative on YouTube and Reddit</b>, concentrated on <b>trailer editing/pacing</b>, <b>comedy timing</b>, and <b>lead casting</b> (Sumanth Prabhas). The studio's "first U/A for Bhadrakali Pictures" family-friendly angle has <b>not</b> picked up organically anywhere in this sample.</div>
+    <div class="chips">
+      <div class="chip"><div class="n" id="c-ytviews"></div><div class="t">YouTube views (~28h)</div></div>
+      <div class="chip"><div class="n pink" id="c-ytlikes"></div><div class="t">YouTube likes &middot; <span id="c-ytcomments"></span> comments</div></div>
+      <div class="chip"><div class="n violet" id="c-xreplypos"></div><div class="t">X reply sentiment: pos vs <span id="c-xreplyneg"></span> neg</div></div>
+      <div class="chip"><div class="n red" id="c-ytneg"></div><div class="t">YouTube top comments negative</div></div>
+    </div>
+  </div>
+
+  <!-- THE GAP -->
+  <h2 class="sec">Promotional narrative vs. organic reaction</h2>
+  <p class="note" style="color:var(--soft);font-size:13px;margin:-6px 0 14px;">The X corpus splits cleanly into two layers: a <b>promotional layer</b> (studio, PR, trade-wire and fan-page accounts reposting event soundbites - positive by construction) and an <b>organic layer</b> (unprompted replies and comments). The two layers tell different stories.</p>
+  <div class="three">
+    <div class="cardbox">
+      <h3 style="color:var(--gold);">Promotional layer (X)</h3>
+      <p class="note" style="margin-top:6px;">92 posts across 16 near-identical text clusters, from official/PR/trade accounts</p>
+      <p style="font-size:14px;">"SEPTEMBER 3rd is the date... get ready for one hilarious ride" and similar copy, reposted by 3-9 accounts each. Plus ~250 trade-press posts quoting launch-event soundbites (idlebrain, 123telugu, Tupaki, NTV, SillyMonks and others) - factual coverage, not personal opinion.</p>
+    </div>
+    <div class="cardbox">
+      <h3 style="color:var(--red);">Organic layer (X replies)</h3>
+      <p class="note" style="margin-top:6px;">34 opinion-bearing replies to the announcement (of 61 total; rest are Spirit/other-film asks, spam, or empty)</p>
+      <p style="font-size:14px;"><b style="color:var(--red);">47.1% negative</b> vs <b style="color:var(--green);">41.2% positive</b>, 11.8% neutral. Net slightly negative - not the picture the trend hashtag alone suggests.</p>
+    </div>
+    <div class="cardbox">
+      <h3 style="color:var(--red);">Organic layer (YouTube + Reddit)</h3>
+      <p class="note" style="margin-top:6px;">163 of 392 YouTube comments reviewed (99% of comment likes); r/tollywood thread at 0.38 upvote ratio</p>
+      <p style="font-size:14px;"><b style="color:var(--red);">52.8% negative</b> vs 11.7% positive by count. The most-liked comments are overwhelmingly critical of trailer cut, comedy, and lead casting.</p>
+    </div>
+  </div>
+  <div class="callout warn">
+    <h3>&#9670; Every unprompted channel points the same way</h3>
+    <p>X replies, YouTube comments, and Reddit - the three channels nobody was paid or prompted to post on - all land negative-to-mixed on the trailer itself. The positive volume on X comes almost entirely from the promotional layer (studio/PR/trade reposts) and from press coverage of the launch event, not from people reacting to the trailer they just watched.</p>
+  </div>
+
+  <!-- SENTIMENT CHARTS -->
+  <h2 class="sec">Sentiment, channel by channel</h2>
+  <div class="two">
+    <div class="cardbox">
+      <h3>X - direct replies to the announcement</h3>
+      <p class="note">34 opinion-bearing replies (of 61 total). Excludes 22 pure Spirit/Prabhas or other-film asks, 2 spam, 4 empty-text replies - they carry no view on the trailer.</p>
+      <div class="chart-box" id="xSentChart"></div>
+    </div>
+    <div class="cardbox">
+      <h3>YouTube - top comments by engagement</h3>
+      <p class="note">163 of 392 comments reviewed in depth (99% of total comment likes). Count-based split, not like-weighted - see caution below.</p>
+      <div class="chart-box" id="ytSentChart"></div>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:16px;">
+    <h3 style="color:var(--gold);">&#9670; A note on "like-weighted" sentiment</h3>
+    <p>The single most-liked comment ("looks like a high-budget short film") alone carries 739 of 3,433 total comment likes (21%); the top 8 comments carry 69%. 215 of 392 comments have zero likes. YouTube's default sort surfaces agreement with a few sharp comments, not a vote count of the audience. <b>Read the count-based split above as primary</b> - it still leans clearly negative, just less dramatically than a like-weighted number would suggest.</p>
+  </div>
+
+  <!-- REDDIT -->
+  <h2 class="sec">Reddit - smaller volume, same direction</h2>
+  <div class="two">
+    <div class="cardbox">
+      <h3>r/tollywood &middot; main trailer thread</h3>
+      <p class="note">8 comments &middot; <span style="color:var(--red);font-weight:700;">0.38 upvote ratio</span> (more downvotes than up)</p>
+      <ul style="margin:8px 0 0 18px;font-size:13.5px;color:var(--muted);">
+        <li>"Trailer ni kuda skip chesi chuse la chesaru" - made me want to skip even the trailer</li>
+        <li>"idhi asalu trailer ey kastam ga undhi" - this trailer itself is hard to sit through</li>
+        <li>"Teaser was better"</li>
+      </ul>
+    </div>
+    <div class="cardbox">
+      <h3>r/Movies___Series &middot; "Poor Trailer Cut"</h3>
+      <p class="note">4 comments &middot; 0.76 upvote ratio &middot; thread title is the poster's own verdict</p>
+      <p style="font-size:13.5px;color:var(--muted);">Original post: "Chemistry is good. Trailer cut is so poor. No proper conveying an emotion other than comedy bits. No natural flow of the trailer." Replies: "Didn't excite much but trusting production house." / "Nothing looks new."</p>
+    </div>
+  </div>
+
+  <!-- THEMES -->
+  <h2 class="sec">Recurring themes</h2>
+  <div class="two">
+    <div class="cardbox">
+      <h3>What the criticism is actually about</h3>
+      <p class="note">Drawn from the negative organic comments/replies across all three platforms</p>
+      <ul style="margin:8px 0 0 18px;font-size:14px;">
+        <li><b>Trailer cut/editing</b> - "poor flow," "random scenes," comedy beats landing without setup</li>
+        <li><b>Comedy not landing</b> - "didn't laugh once," several "where's the funny part" comments</li>
+        <li><b>Lead casting (Sumanth Prabhas)</b> - repeated "wrong casting choice," "not hero material" comments</li>
+        <li><b>Production scale</b> - "looks like a short film" is the single most-liked YouTube comment</li>
+      </ul>
+    </div>
+    <div class="cardbox">
+      <h3>The Spirit / Prabhas tangent, again</h3>
+      <p class="note"><span class="big" style="font-size:22px;font-weight:800;color:var(--violet);">24.6%</span> of all 61 direct replies (Part B measured 45% on the announcement)</p>
+      <p style="font-size:14px;">Smaller than the first-look report, as expected - this time there's an actual trailer to react to. Still a real drag on signal: about a quarter of replies are "Spirit update anna" rather than a view on Romanchakam. A minor further tangent: 4 replies ask about unrelated films (Arjun Reddy re-release, Toxic, The Devil).</p>
+    </div>
+  </div>
+
+  <div class="callout gold" style="margin-top:16px;">
+    <h3>&#9670; The Prabhas Instagram endorsement - still developing</h3>
+    <p>~22 hours after the trailer dropped, Prabhas posted an Instagram story calling it "fun and entertaining" and wishing the team well; it began circulating on X via reposts (<span class="src">@ivdsai</span><span class="src">@NusratArfah</span><span class="src">@PrabhasGirlsFC</span> and others) in the last few hours of this capture window. It's a genuine positive signal from the biggest reachable audience (Part B), but it landed too late for this snapshot to show its full effect. <b>Recommend a follow-up pull at T+48h</b> to see whether it shifts the organic numbers above.</p>
+  </div>
+
+  <div class="callout" style="margin-top:16px;border-color:var(--orange);background:linear-gradient(135deg,#2a2318,#241a2f);">
+    <h3 style="color:var(--orange);">&#9670; The U/A-certificate message hasn't landed organically</h3>
+    <p>The studio's own PR pushed hard on "first time Bhadrakali Pictures gets a U/A instead of A - bring the whole family" (multiple trade-press reposts on X quote it directly from Sandeep Reddy Vanga). It does not appear anywhere in the organic YouTube, Reddit, or reply sample reviewed - nobody is repeating it back. A message that isn't picked up by an interested audience one day after the trailer is a message that needs a second push, not necessarily a bad one.</p>
+  </div>
+
+  <!-- QUOTES TABLE -->
+  <h2 class="sec">Representative reactions</h2>
+  <div class="two">
+    <div class="cardbox" style="padding:0;overflow:hidden;">
+      <table id="posTable">
+        <thead><tr><th colspan="2" style="color:var(--green);">Positive</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="cardbox" style="padding:0;overflow:hidden;">
+      <table id="negTable">
+        <thead><tr><th colspan="2" style="color:var(--red);">Critical</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TRENDS -->
+  <h2 class="sec">Where the search interest is</h2>
+  <div class="two">
+    <div class="cardbox">
+      <h3>India, by state</h3>
+      <p class="note">Google Trends relative interest, past 7 days, 0-100 scale</p>
+      <div class="chart-box" id="stateChart" style="height:auto;"></div>
+    </div>
+    <div class="cardbox">
+      <h3>Worldwide</h3>
+      <p class="note">Same window; India dwarfs every other country</p>
+      <div class="chart-box" id="worldChart" style="height:auto;"></div>
+    </div>
+  </div>
+  <p class="legend">Interest spiked sharply from ~8:30 PM IST on 25 Aug (trailer drop) and peaked around 100 (India-normalized) near 7-9 AM IST on 26 Aug as morning re-watchers searched it up - a clean, trailer-driven spike with no other confound in the window.</p>
+
+  <!-- RECOMMENDATIONS -->
+  <h2 class="sec">What this means for the team</h2>
+  <ul class="recs">
+    <li><b>Address the edit, not just the marketing.</b> "Poor flow," "random scenes," and "didn't laugh once" are the most consistent, most-liked criticisms across YouTube and Reddit. If a re-cut trailer or a second trailer is still possible before 3 Sep, tightening pacing and comedy setup is the highest-leverage fix available.</li>
+    <li><b>Lean into the Prabhas endorsement, hard and fast.</b> It's the strongest organic positive signal in the whole dataset and it's brand new. Push it through official channels (repost, clip it, tag it) before the news cycle moves on - Part B already showed this is the single most reachable audience.</li>
+    <li><b>Don't lead with the U/A-certificate message a second time the same way.</b> It got zero organic pickup in 22-28 hours. Either drop it from the next push or reframe it around something the audience already responds to (the Prabhas connection, the music) rather than the certificate itself.</li>
+    <li><b>Get ahead of the lead-casting question.</b> Skepticism about Sumanth Prabhas specifically (not the film generally) recurs independently on X, YouTube, and Reddit. A behind-the-scenes or interview push that lets him land a joke or a genuine moment could blunt this before release.</li>
+    <li><b>Re-pull at T+48h.</b> This snapshot ends just as the Prabhas endorsement starts spreading. A follow-up read closer to the weekend will show whether organic sentiment actually moves, or whether the edit/casting criticism persists once the endorsement bump fades.</li>
+  </ul>
+
+  <ul class="watch">
+    <li><b>This is a curated, high-engagement sample, not the full population.</b> X: 451 of a much larger raw trend (deduped from 521 scraped posts). YouTube: 163 of 392 comments reviewed in depth. Treat percentages as directional, not census-grade.</li>
+    <li><b>X "1.5M+ impressions" is cumulative, not unique reach</b> - it is the sum of view counts across 348 organic posts, so the same viewer is very likely counted more than once.</li>
+    <li><b>Instagram was not sampled directly</b> (no reliable read-only tool available at capture time); the Prabhas endorsement is known only via X reposts of his IG story screenshot/text.</li>
+    <li><b>A small regional/dialect undercurrent appeared on all three platforms</b> (2 of 61 X replies, one YouTube sub-thread debating Telangana vs Andhra casting, one Reddit comment removed for rule violations). Flagged for awareness; too small a volume to size as a sentiment driver, and not quoted verbatim here.</li>
+  </ul>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="row"><b>Sources &amp; method</b></div>
+    <div class="row"><span class="check">&#10003;</span> X: user-scraped keyword search, hashtag search, and direct replies to the announcement post (521 raw posts, 451 unique after dedupe), classified by manual review.</div>
+    <div class="row"><span class="check">&#10003;</span> YouTube: <code>yt-dlp</code> against the public trailer, capturing view/like/comment counts and 392 comments; top 163 by like-count reviewed manually (99% of total comment likes).</div>
+    <div class="row"><span class="check">&#10003;</span> Reddit: <code>rdt-cli</code> direct thread reads plus keyword search across relevant subreddits.</div>
+    <div class="row"><span class="check">&#10003;</span> Google Trends: trends.google.com, past-7-days window, India subregion and worldwide.</div>
+    <div class="row" style="margin-top:8px;font-style:italic;color:var(--soft);">Snapshot report, not a tracking dashboard - all figures are as of the capture window above and will move. This report supersedes nothing in Part A of the companion first-look report except the release date (confirmed 3 Sep 2026, vs. Part A's modeled 28 Aug preference).</div>
+  </div>
+
+</div>
+
+<script>
+const DATA = {
+  youtube: {views:602878, likes:18544, comments:392, reviewed:163,
+    sent:{negative:86, positive:19, neutral:58}},
+  x: {reply_total:61, opinion_bearing:34,
+    sent:{positive:14, negative:16, neutral:4}},
+  trends: {
+    states:[{r:"Telangana",v:100},{r:"Andhra Pradesh",v:94},{r:"Karnataka",v:13},{r:"Odisha",v:12},{r:"Tamil Nadu",v:6}],
+    world:[{r:"India",v:100},{r:"United States",v:2},{r:"United Kingdom",v:2},{r:"Australia",v:2}]
+  },
+  positive:[
+    {handle:"venuudugulafilm", text:"Romanchakam trailer is extremely fun! Loved the energy, humour and the crazy vibe throughout. It feels fresh, entertaining and genuinely exciting.", likes:16},
+    {handle:"SureshPRO_", text:"Superb response for #Romanchakam Trailer. Can't wait for Sep 3rd.", likes:24},
+    {handle:"AshLogic", text:"Romanchakam trailer = Love + Comedy + Suspense. Fresh faces, fresh vibe and an interesting premise.", likes:3},
+    {handle:"@Akashreddy-k1b (YouTube)", text:"Naaku ee trailer baaga nachindi. Premiers pothunnam - I really liked this trailer, going for premieres.", likes:5},
+    {handle:"@pulsarpradeep1256 (YouTube)", text:"Pakka HIT movie", likes:7},
+    {handle:"Amadalakishore", text:"All the best Anna.... Superb Cut Trailer", likes:0}
+  ],
+  negative:[
+    {handle:"dinnyk4u", text:"Ledu bayya so much dissatisfaction with this trailer", likes:3},
+    {handle:"filmalcoholic7", text:"Content isn't that good! Sumanth always seems like the wrong casting choice for main lead!", likes:3},
+    {handle:"CharanCraft", text:"Trailer Em bagaley (Trailer wasn't good). Atleast Screenplay Ledhu (there's no screenplay).", likes:1},
+    {handle:"@prakashakash1659 (YouTube)", text:"High budget short film la undhi Anna - looks like a high-budget short film, bro", likes:739},
+    {handle:"@mahanmahashay199 (YouTube)", text:"Okkasari Kuda navvu Rakunda bhale cut chesaru trailer - cut it so well we didn't laugh once", likes:281},
+    {handle:"r/tollywood (Reddit)", text:"idhi asalu trailer ey kastam ga undhi - this trailer itself is hard to sit through", likes:6}
+  ]
+};
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function donut(elId, counts, colors){
+  const el = document.getElementById(elId);
+  const total = Object.values(counts).reduce((a,b)=>a+b,0);
+  const size=260, cx=130, cy=130, r=88, sw=34;
+  let a0=-90, parts=[];
+  const order = Object.keys(counts);
+  order.forEach(k=>{
+    const v=counts[k], frac=v/total, a1=a0+frac*360;
+    const large = (a1-a0)>180?1:0;
+    const x0=cx+r*Math.cos(a0*Math.PI/180), y0=cy+r*Math.sin(a0*Math.PI/180);
+    const x1=cx+r*Math.cos(a1*Math.PI/180), y1=cy+r*Math.sin(a1*Math.PI/180);
+    parts.push(`<path d="M ${x0} ${y0} A ${r} ${r} 0 ${large} 1 ${x1} ${y1}" fill="none" stroke="${colors[k]}" stroke-width="${sw}"/>`);
+    a0=a1;
+  });
+  let legend = order.map(k=>`<div style="display:flex;align-items:center;gap:8px;margin-top:8px;"><span style="width:11px;height:11px;border-radius:3px;background:${colors[k]};display:inline-block;"></span><span style="text-transform:capitalize;color:var(--text);font-weight:600;font-size:13.5px;">${k}</span><span style="color:var(--muted);font-size:13px;margin-left:auto;">${counts[k]} (${(100*counts[k]/total).toFixed(1)}%)</span></div>`).join('');
+  el.innerHTML = `<div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+    <svg width="${size}" height="${size}" viewBox="0 0 260 260">${parts.join('')}
+      <text x="130" y="124" text-anchor="middle" font-size="30" font-weight="800" fill="var(--text)">${total}</text>
+      <text x="130" y="146" text-anchor="middle" font-size="11" fill="var(--muted)">reviewed</text>
+    </svg>
+    <div style="flex:1;min-width:150px;">${legend}</div>
+  </div>`;
+}
+
+donut('xSentChart', DATA.x.sent, {positive:'var(--green)', negative:'var(--red)', neutral:'var(--gold)'});
+donut('ytSentChart', DATA.youtube.sent, {negative:'var(--red)', neutral:'var(--gold)', positive:'var(--green)'});
+
+function hbars(elId, items, opts){
+  opts = opts||{};
+  const max = opts.max || Math.max(...items.map(d=>d.v));
+  const rowH = 34, gap=10, leftW=140, chartW=380;
+  const h = items.length*(rowH+gap);
+  let rows = items.map((d,i)=>{
+    const y = i*(rowH+gap);
+    const w = Math.max(2, (d.v/max)*chartW);
+    return `<g transform="translate(0,${y})">
+      <text x="${leftW-10}" y="${rowH/2+4}" text-anchor="end" class="barlabel" fill="var(--text)" font-size="12.5">${esc(d.r)}</text>
+      <rect x="${leftW}" y="4" width="${chartW}" height="${rowH-8}" rx="6" fill="#160f24"></rect>
+      <rect x="${leftW}" y="4" width="${w}" height="${rowH-8}" rx="6" fill="${opts.color||'var(--teal)'}"></rect>
+      <text x="${leftW+w+8}" y="${rowH/2+4}" class="barlabel" font-weight="700" fill="var(--text)">${d.v}</text>
+    </g>`;
+  }).join('');
+  document.getElementById(elId).innerHTML = `<svg viewBox="0 0 ${leftW+chartW+50} ${h}" width="100%" height="${h}">${rows}</svg>`;
+}
+
+hbars('stateChart', DATA.trends.states.map(d=>({r:d.r,v:d.v})), {max:100, color:'var(--violet)'});
+hbars('worldChart', DATA.trends.world.map(d=>({r:d.r,v:d.v})), {max:100, color:'var(--teal)'});
+
+function fillTable(id, rows){
+  const tb = document.querySelector('#'+id+' tbody');
+  tb.innerHTML = rows.map(r=>`<tr><td><span class="handle">${esc(r.handle)}</span><div style="margin-top:3px;">${esc(r.text)}</div></td><td class="num">${r.likes} likes</td></tr>`).join('');
+}
+fillTable('posTable', DATA.positive);
+fillTable('negTable', DATA.negative);
+
+document.getElementById('c-ytviews').textContent = DATA.youtube.views.toLocaleString();
+document.getElementById('c-ytlikes').textContent = DATA.youtube.likes.toLocaleString();
+document.getElementById('c-ytcomments').textContent = DATA.youtube.comments.toLocaleString();
+document.getElementById('c-xreplypos').textContent = DATA.x.sent.positive + ' pos';
+document.getElementById('c-xreplyneg').textContent = DATA.x.sent.negative;
+document.getElementById('c-ytneg').textContent = Math.round(100*DATA.youtube.sent.negative/DATA.youtube.reviewed) + '%';
+</script>
+</body>
+</html>

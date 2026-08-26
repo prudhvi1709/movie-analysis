@@ -11,6 +11,7 @@ A static landing page (`index.html`) links every analysis. The site is ready to 
 | The Black Gold | [`the-black-dog/`](./the-black-dog/) | Live | Release date + teaser/trailer schedule, promotion plan, real X social-buzz history, influencer outreach |
 | Spirit | [`spirit-analysis/`](./spirit-analysis/) | Live | Social-media analytics dashboard (Prabhas, dir. Sandeep Reddy Vanga). Copied from `prudhvi1709/spiritanalysis` |
 | Romanchakam | [`romanchakam-analysis/`](./romanchakam-analysis/) | Live | First-look reception report (Bhadrakali Pictures). Copied from `prudhvi1709/romanchakam-analysis` |
+| Romanchakam (Trailer) | [`romanchakam-trailer-analysis/`](./romanchakam-trailer-analysis/) | Live | Cross-platform trailer reception report (X, YouTube, Reddit, Google Trends) |
 
 ## Structure
 

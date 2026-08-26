@@ -1,0 +1,243 @@
+"""Reproducible build script for the Romanchakam trailer reception report.
+
+Every dataset below is the classified sample this report is built from, embedded
+directly (no external files) so the JSON outputs can be regenerated from this
+script alone. Sentiment and theme were assigned by manual review of each item,
+mirroring the Part B (first-look) methodology in ../romanchakam-analysis.
+
+Run: python3 build_data.py
+"""
+
+import json
+from pathlib import Path
+
+OUT = Path(__file__).parent
+
+# ---------------------------------------------------------------------------
+# Film / trailer metadata
+# ---------------------------------------------------------------------------
+
+FILM = {
+    "title": "Romanchakam",
+    "banner": "Bhadrakali Pictures",
+    "presenter": "Sandeep Reddy Vanga",
+    "director": "Venu Udugula",
+    "producer": "Pranay Reddy Vanga",
+    "cast": ["Sumanth Prabhas", "Ananthika Sanilkumar"],
+    "release_date": "2026-09-03",
+    "trailer_url": "https://youtu.be/c5IXkos5XMI",
+    "trailer_drop_ist": "2026-08-25T20:31:00+05:30",
+    "capture_window_ist": "through 2026-08-26 evening IST (~T+22-28h post-drop)",
+    "note": "Supersedes the preferred-date model in Part A of ../romanchakam-analysis, "
+            "which scored 28 Aug and did not list 3 Sep. Confirmed release date is 3 Sep 2026.",
+}
+
+# ---------------------------------------------------------------------------
+# YouTube trailer stats (via yt-dlp, captured 2026-08-26)
+# ---------------------------------------------------------------------------
+
+YOUTUBE = {
+    "views": 602878,
+    "likes": 18544,
+    "comment_count": 392,
+    "channel": "Bhadrakali Pictures",
+    "channel_subs": 135000,
+    "duration_sec": 199,
+    "comments_reviewed": 163,          # top-sorted comments reviewed, by like-count
+    "comments_reviewed_like_share": 99.2,  # % of total comment likes these 163 represent
+    "comment_sentiment_counts": {"negative": 86, "positive": 19, "neutral": 58},
+    # illustrative quotes, most-liked first (lightly trimmed, profanity-free ones kept verbatim)
+    "top_comments": [
+        {"text": "High budget short film la undhi Anna", "translation": "Looks like a high-budget short film, bro", "likes": 739, "sentiment": "negative"},
+        {"text": "How many members disappointed from trailer", "likes": 472, "sentiment": "negative"},
+        {"text": "Ee Madya Kalam Lo Intha High Quality Shortfilm Chudaledhu", "translation": "Haven't seen such a 'high quality short film' recently (sarcastic)", "likes": 328, "sentiment": "negative"},
+        {"text": "Okkasari Kuda navvu Rakunda bhale cut chesaru trailer", "translation": "Cut the trailer so well we didn't laugh even once", "likes": 281, "sentiment": "negative"},
+        {"text": "idhem trailer ra babuu intha worst ga vundhi?????", "translation": "What kind of trailer is this, so bad", "likes": 171, "sentiment": "negative"},
+        {"text": "Sandeep Reddy Vanga reducing his standards by producing this one...", "likes": 58, "sentiment": "negative"},
+        {"text": "Naaku ee trailer baaga nachindi, Premiers pothunnam", "translation": "I really liked this trailer, going for premieres", "likes": 5, "sentiment": "positive"},
+        {"text": "Pakka HIT movie", "likes": 7, "sentiment": "positive"},
+        {"text": "Didn't expected this from Badrakali pictures, worst trailer cut", "likes": 5, "sentiment": "negative"},
+        {"text": "Heroine's dubbing is so boring, voice sounds outdated and over matured.", "likes": 3, "sentiment": "negative"},
+    ],
+}
+
+# ---------------------------------------------------------------------------
+# X (twitter) - dataset stats. Counts derived from three scraped sets:
+# Sandeep's announcement replies (62), keyword search "Romanchakam" (351),
+# hashtag search #Romanchakam/#RomanchakamTrailer (108). Deduped by link.
+# ---------------------------------------------------------------------------
+
+X = {
+    "raw_pulled": {"sandeep_replies": 62, "keyword_search": 351, "hashtag_search": 108, "total_raw": 521},
+    "unique_after_dedupe": 451,
+    "syndicated_pr_clusters": 16,      # near-identical text posted by >=3 distinct accounts
+    "syndicated_pr_posts": 92,
+    "organic_distinct_posts": 348,     # unique text, incl. trade-press event coverage
+    "organic_cumulative_views": 1303263,  # SUM of view counts across posts - not unique reach
+    "organic_cumulative_likes": 54382,
+    "direct_replies_to_announcement": 61,   # unique replies to imvangasandeep's trailer-drop post
+    "opinion_bearing_replies": 34,          # excludes pure Spirit/other-film asks, spam, empty text
+    "reply_sentiment_counts": {"positive": 14, "negative": 16, "neutral": 4},
+    "reply_tangent_counts": {  # of all 61 replies, independent of sentiment
+        "spirit_prabhas_ask": 15, "other_film_ask": 4, "regional_dialect": 2, "spam": 2, "none": 38,
+    },
+    "prabhas_ig_endorsement": {
+        "text": "What a Fun and Entertaining Romanchakam Trailer!!! Thoroughly enjoyed it... "
+                 "I'm sure everyone is going to have a great time watching this in cinemas on "
+                 "September 3rd... All the very best to the entire team.",
+        "source": "Prabhas's Instagram story, captured via X reposts (Instagram itself not sampled)",
+        "landed_ist": "2026-08-26T18:55:18+05:30",
+        "hours_after_drop": 22.4,
+        "note": "Landed in the final hours of this capture window - its full amplification is "
+                "not yet reflected in these numbers. Recommend a follow-up pull at T+48h.",
+    },
+    "notable_positive": [
+        {"handle": "venuudugulafilm", "text": "Romanchakam trailer is extremely fun! Loved the energy, humour and the crazy vibe throughout. It feels fresh, entertaining and genuinely exciting.", "likes": 16},
+        {"handle": "SureshPRO_", "text": "Superb response for #Romanchakam Trailer. Can't wait for Sep 3rd.", "likes": 24},
+        {"handle": "AshLogic", "text": "Romanchakam trailer = Love + Comedy + Suspense. Fresh faces, fresh vibe and an interesting premise. Looks like a proper youthful entertainer!", "likes": 3},
+    ],
+    "notable_negative": [
+        {"handle": "dinnyk4u", "text": "Ledu bayya so much dissatisfaction with this trailer", "likes": 3, "reply": True},
+        {"handle": "filmalcoholic7", "text": "Vanga brothers bankrolled this project out of love for the director... content isn't that good. Sumanth always seems like the wrong casting choice for main lead!", "likes": 3},
+        {"handle": "CharanCraft", "text": "Elanti Movie endhuku bhai. Trailer Em bagaley. Atleast Screenplay Ledhu.", "translation": "Why make such a movie. Trailer wasn't good. At least there's no screenplay.", "likes": 1, "reply": True},
+        {"handle": "HiteshKumar527", "text": "chaala cringe undi guru.... re release trailers kanna warrstt undi...", "translation": "So cringe, worse than re-release trailers", "likes": 1, "reply": True},
+    ],
+}
+
+# ---------------------------------------------------------------------------
+# Reddit (via rdt-cli)
+# ---------------------------------------------------------------------------
+
+REDDIT = {
+    "threads": [
+        {
+            "subreddit": "r/tollywood",
+            "title": "Romanchakam Trailer - Sandeep Reddy Vanga | Sumanth Prabhas | Ananthika | Venu | Vasuki | Pranay",
+            "upvote_ratio": 0.38,
+            "num_comments": 8,
+            "sample_comments": [
+                "Trailer ni kuda skip chesi chuse la chesaru (Made me want to skip even the trailer)",
+                "idhi asalu trailer ey kastam ga undhi (This trailer itself is hard to sit through)",
+                "Rotha la undi. But lately Abbavaram cinema lanti chetta ni hit chesaru manollu (Trashy - but we've hit-ed worse recently too)",
+                "Teaser was better",
+            ],
+        },
+        {
+            "subreddit": "r/Movies___Series",
+            "title": "Romanchakam - Random Scenes & Emotions..... Poor Trailer Cut",
+            "upvote_ratio": 0.76,
+            "num_comments": 4,
+            "op_excerpt": "Chemistry is good. Trailer cut is so poor. No proper conveying an emotion other than "
+                          "comedy bits. No natural flow of the trailer.",
+            "sample_comments": ["Didn't excite much but trusting production house.", "Nothing looks new."],
+        },
+    ],
+}
+
+# ---------------------------------------------------------------------------
+# Google Trends (search interest, past 7 days as of 2026-08-26 ~19:00 IST)
+# ---------------------------------------------------------------------------
+
+TRENDS = {
+    "india_subregion": [
+        {"region": "Telangana", "value": 100},
+        {"region": "Andhra Pradesh", "value": 94},
+        {"region": "Karnataka", "value": 13},
+        {"region": "Odisha", "value": 12},
+        {"region": "Tamil Nadu", "value": 6},
+    ],
+    "worldwide_region": [
+        {"region": "India", "value": 100},
+        {"region": "United States", "value": 2},
+        {"region": "United Kingdom", "value": 2},
+        {"region": "Australia", "value": 2},
+    ],
+    "note": "Search interest spiked sharply from ~8:30 PM IST Aug 25 (trailer drop), peaking "
+            "~100 (India-normalized) around 7-9 AM IST Aug 26 as morning re-watchers searched it up.",
+}
+
+# ---------------------------------------------------------------------------
+# Derived / combined output
+# ---------------------------------------------------------------------------
+
+def pct(part, total):
+    return round(100 * part / total, 1) if total else 0.0
+
+
+def build():
+    reply_total = sum(X["reply_sentiment_counts"].values())
+    yt_total = sum(YOUTUBE["comment_sentiment_counts"].values())
+
+    sentiment_analysis = {
+        "x_direct_replies": {
+            "opinion_bearing_n": reply_total,
+            "excluded_n": X["direct_replies_to_announcement"] - reply_total,
+            "excluded_reason": "pure Spirit/Prabhas or other-film asks, spam, or empty-text replies "
+                                "carry no opinion on the trailer and are excluded, matching the Part B method",
+            "counts": X["reply_sentiment_counts"],
+            "pct": {k: pct(v, reply_total) for k, v in X["reply_sentiment_counts"].items()},
+        },
+        "youtube_comments": {
+            "reviewed_n": yt_total,
+            "reviewed_of_total": YOUTUBE["comment_count"],
+            "reviewed_like_share_pct": YOUTUBE["comments_reviewed_like_share"],
+            "counts": YOUTUBE["comment_sentiment_counts"],
+            "pct": {k: pct(v, yt_total) for k, v in YOUTUBE["comment_sentiment_counts"].items()},
+            "caution": "Count-based split among the highest-engagement comments reviewed (99% of "
+                       "total comment likes). Do not read this as '88% of viewers' - YouTube's "
+                       "default Top sort concentrates likes on a handful of comments; the like-weighted "
+                       "figure describes the most-visible comments, not the full audience.",
+        },
+        "reddit": REDDIT,
+    }
+
+    top_contributors = {
+        "x_positive": X["notable_positive"],
+        "x_negative": X["notable_negative"],
+        "youtube_top_by_likes": YOUTUBE["top_comments"],
+    }
+
+    combined = {
+        "film": FILM,
+        "youtube": YOUTUBE,
+        "x": X,
+        "reddit": REDDIT,
+        "google_trends": TRENDS,
+        "methodology": {
+            "x_source": "User-scraped X data (keyword search, hashtag search, and replies to the "
+                        "announcement post), pasted as JSON.",
+            "youtube_source": "yt-dlp against the public trailer URL - view/like/comment counts and "
+                              "top-sorted comments.",
+            "reddit_source": "rdt-cli (authenticated) - direct thread reads plus keyword search.",
+            "trends_source": "Google Trends (trends.google.com), past-7-days window, India and worldwide.",
+            "capture_window": FILM["capture_window_ist"],
+            "limitations": [
+                "X 'views' are cumulative impressions summed across 451 posts, not unique reach.",
+                "The Prabhas Instagram endorsement landed ~22h after the trailer drop, in the final "
+                "hours of this capture window; its full effect on sentiment is not yet visible here. "
+                "Recommend a follow-up pull at T+48h once it has propagated.",
+                "This is a curated, high-engagement sample (X: 451 of a much larger raw trend; "
+                "YouTube: 163 of 392 comments reviewed in depth) - not the full population. Treat "
+                "percentages as directional.",
+                "Instagram itself was not sampled (no working CLI); the Prabhas endorsement is known "
+                "only via X reposts of his IG story.",
+                "A regional/dialect undercurrent (comments contrasting Telangana vs Andhra filmmaking "
+                "and casting) surfaced on all three platforms in small volume (X: 2 of 61 replies, plus "
+                "one Reddit comment removed for rule violations). Not quoted verbatim here; flagged as "
+                "a theme for the team's awareness, not sized as a sentiment driver.",
+            ],
+        },
+    }
+
+    (OUT / "film_data.json").write_text(json.dumps(FILM, indent=2, ensure_ascii=False), encoding="utf-8")
+    (OUT / "sentiment_analysis.json").write_text(json.dumps(sentiment_analysis, indent=2, ensure_ascii=False), encoding="utf-8")
+    (OUT / "top_contributors.json").write_text(json.dumps(top_contributors, indent=2, ensure_ascii=False), encoding="utf-8")
+    (OUT / "combined_analysis.json").write_text(json.dumps(combined, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    print("Wrote film_data.json, sentiment_analysis.json, top_contributors.json, combined_analysis.json")
+    print(f"X opinion-bearing replies: {reply_total} -> {sentiment_analysis['x_direct_replies']['pct']}")
+    print(f"YouTube comments reviewed: {yt_total} -> {sentiment_analysis['youtube_comments']['pct']}")
+
+
+if __name__ == "__main__":
+    build()

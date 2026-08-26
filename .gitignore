@@ -4,3 +4,6 @@
 node_modules/
 .fuse_hidden*
 *.fuse_hidden*
+CLAUDE.md
+.gitignore
+.playwright-mcp

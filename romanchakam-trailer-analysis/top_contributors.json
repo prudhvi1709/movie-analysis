@@ -1,0 +1,103 @@
+{
+  "x_positive": [
+    {
+      "handle": "venuudugulafilm",
+      "text": "Romanchakam trailer is extremely fun! Loved the energy, humour and the crazy vibe throughout. It feels fresh, entertaining and genuinely exciting.",
+      "likes": 16
+    },
+    {
+      "handle": "SureshPRO_",
+      "text": "Superb response for #Romanchakam Trailer. Can't wait for Sep 3rd.",
+      "likes": 24
+    },
+    {
+      "handle": "AshLogic",
+      "text": "Romanchakam trailer = Love + Comedy + Suspense. Fresh faces, fresh vibe and an interesting premise. Looks like a proper youthful entertainer!",
+      "likes": 3
+    }
+  ],
+  "x_negative": [
+    {
+      "handle": "dinnyk4u",
+      "text": "Ledu bayya so much dissatisfaction with this trailer",
+      "likes": 3,
+      "reply": true
+    },
+    {
+      "handle": "filmalcoholic7",
+      "text": "Vanga brothers bankrolled this project out of love for the director... content isn't that good. Sumanth always seems like the wrong casting choice for main lead!",
+      "likes": 3
+    },
+    {
+      "handle": "CharanCraft",
+      "text": "Elanti Movie endhuku bhai. Trailer Em bagaley. Atleast Screenplay Ledhu.",
+      "translation": "Why make such a movie. Trailer wasn't good. At least there's no screenplay.",
+      "likes": 1,
+      "reply": true
+    },
+    {
+      "handle": "HiteshKumar527",
+      "text": "chaala cringe undi guru.... re release trailers kanna warrstt undi...",
+      "translation": "So cringe, worse than re-release trailers",
+      "likes": 1,
+      "reply": true
+    }
+  ],
+  "youtube_top_by_likes": [
+    {
+      "text": "High budget short film la undhi Anna",
+      "translation": "Looks like a high-budget short film, bro",
+      "likes": 739,
+      "sentiment": "negative"
+    },
+    {
+      "text": "How many members disappointed from trailer",
+      "likes": 472,
+      "sentiment": "negative"
+    },
+    {
+      "text": "Ee Madya Kalam Lo Intha High Quality Shortfilm Chudaledhu",
+      "translation": "Haven't seen such a 'high quality short film' recently (sarcastic)",
+      "likes": 328,
+      "sentiment": "negative"
+    },
+    {
+      "text": "Okkasari Kuda navvu Rakunda bhale cut chesaru trailer",
+      "translation": "Cut the trailer so well we didn't laugh even once",
+      "likes": 281,
+      "sentiment": "negative"
+    },
+    {
+      "text": "idhem trailer ra babuu intha worst ga vundhi?????",
+      "translation": "What kind of trailer is this, so bad",
+      "likes": 171,
+      "sentiment": "negative"
+    },
+    {
+      "text": "Sandeep Reddy Vanga reducing his standards by producing this one...",
+      "likes": 58,
+      "sentiment": "negative"
+    },
+    {
+      "text": "Naaku ee trailer baaga nachindi, Premiers pothunnam",
+      "translation": "I really liked this trailer, going for premieres",
+      "likes": 5,
+      "sentiment": "positive"
+    },
+    {
+      "text": "Pakka HIT movie",
+      "likes": 7,
+      "sentiment": "positive"
+    },
+    {
+      "text": "Didn't expected this from Badrakali pictures, worst trailer cut",
+      "likes": 5,
+      "sentiment": "negative"
+    },
+    {
+      "text": "Heroine's dubbing is so boring, voice sounds outdated and over matured.",
+      "likes": 3,
+      "sentiment": "negative"
+    }
+  ]
+}
