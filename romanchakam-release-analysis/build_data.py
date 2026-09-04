@@ -1,0 +1,335 @@
+"""Reproducible build script for the Romanchakam release-day reception report.
+
+Every dataset below is the classified sample this report is built from, embedded
+directly (no external files) so the JSON outputs can be regenerated from this
+script alone. Sentiment was assigned by manual review of each item, following
+the methodology in ../romanchakam-trailer-analysis (opinion-bearing items only;
+promotional/PR-template posts and pure box-office numbers are excluded from the
+sentiment denominators and reported separately as their own layer).
+
+Run: python3 build_data.py
+"""
+
+import json
+from pathlib import Path
+
+OUT = Path(__file__).parent
+
+# ---------------------------------------------------------------------------
+# Film metadata
+# ---------------------------------------------------------------------------
+
+FILM = {
+    "title": "Romanchakam",
+    "banner": "Bhadrakali Pictures",
+    "presenter": "Sandeep Reddy Vanga",
+    "director": "Venu Gopal Reddy",
+    "producer": "Pranay Reddy Vanga",
+    "music": "Vasuki Vaibhav",
+    "cast": ["Sumanth Prabhas", "Ananthika Sanilkumar", "Upendra Limaye", "Narendra Ravi", "Mani Aegurla", "Sai Sohan"],
+    "tagline": "Prema, Haasyam, Uthkanta (Love, Comedy, Suspense)",
+    "night_premieres_ist": "2026-09-02 evening/night",
+    "wide_release": "2026-09-03",
+    "capture_window": "2026-09-02 (premieres) through 2026-09-04 morning IST (~Day 1 + early Day 2)",
+    "note": "Companion to ../romanchakam-analysis (Part A/B, pre-announcement) and "
+            "../romanchakam-trailer-analysis (trailer reception, 25-26 Aug). This report "
+            "covers actual audience/critic reception after the film released.",
+}
+
+# ---------------------------------------------------------------------------
+# X (twitter) - raw pull stats and classified samples
+# ---------------------------------------------------------------------------
+
+X = {
+    "raw_pulled": {"set_1": 86, "set_2": 453, "total_raw": 539},
+    "unique_after_dedupe": 516,
+    "total_likes_sum": 126055,
+    "total_views_sum": 7847941,
+    "unique_handles": 291,
+
+    # Press/critic reviews: outlets and reviewers publishing a formal verdict
+    # (with or without a numeric score). This is a distinct layer from ordinary
+    # audience posts below - treated separately because it is the most
+    # consistent, comparable signal in the whole X corpus.
+    "reviews_sample": [
+        {"handle": "venkyreviews", "rating_of_5": 2.0, "sentiment": "negative", "likes": 3487,
+         "text": "Artificial Short Film Vibes With Only a Few Comedy Scenes Working! Boring for most of its runtime, tiring staging, barely any plot... Rating: 2/5"},
+        {"handle": "GulteOfficial", "rating_of_5": 2.5, "sentiment": "mixed", "likes": 400,
+         "text": "'Fun' Clicked. 'Romance & Thrill' Did Not. Only the fun part clicked; the other two suffered from poor writing. Rating - 2.5/5"},
+        {"handle": "M9News_", "rating_of_5": 2.0, "sentiment": "negative", "likes": 171,
+         "text": "Review: Thin Story, Patchy Laughs. Wafer-thin story, weak staging hurts the first half. M9 Rating: 2/5"},
+        {"handle": "CinemaMadness24", "rating_of_5": 2.25, "sentiment": "negative", "likes": 71,
+         "text": "(Telugu) {2.25/5} - Aromanchakam."},
+        {"handle": "Cinemaaforu", "rating_of_5": 2.25, "sentiment": "negative", "likes": 15,
+         "text": "Review Rating(2.25/5). The fun never really takes off... a few laughs aside, Romanchakam feels like a missed opportunity."},
+        {"handle": "Telugu360", "rating_of_5": 2.25, "sentiment": "negative", "likes": 50,
+         "text": "Telugu review: love lacking, suspense missing, a few laughs shared. Telugu360 Rating: 2.25/5"},
+        {"handle": "tolly_UK_US_EU", "rating_of_5": 2.25, "sentiment": "mixed", "likes": 40,
+         "text": "Okaish!! Just a passable entertainer. Biggest letdown is the Music, Mixing & BGM. Dialogues and friend comedy timing were hilarious. 2.25/5"},
+        {"handle": "IamFlickPanda", "rating_of_5": 3.0, "sentiment": "mixed", "likes": 7,
+         "text": "A mixed bag with a few entertaining stretches... if not for Sandeep Reddy Vanga, I probably would have waited for OTT. 6/10 - OKAY"},
+        {"handle": "movie__maniac", "rating_of_5": 2.75, "sentiment": "mixed", "likes": 4,
+         "text": "Above-average comedy-romantic movie. Comedy worked very well, love/suspense didn't work much. Rating: 2.75/5"},
+        {"handle": "FDFSNation", "rating_of_5": 2.75, "sentiment": "mixed", "likes": 1,
+         "text": "Short Review: Passable Watch. If You Want Fun Then Go Watch It. My Rating: 2.75/5"},
+        {"handle": "sathish08795444", "rating_of_5": 2.25, "sentiment": "mixed", "likes": 1,
+         "text": "One time watchable movie. Good first half; heroine's character/startup idea could've explored well. My rating - 2.25/5"},
+        {"handle": "Thyview", "rating_of_5": None, "sentiment": "negative", "likes": 580,
+         "text": "The writing never really brings its elements together... Overall, Romanchakam didn't work for me."},
+        {"handle": "AndhraBoxOffice", "rating_of_5": None, "sentiment": "mixed", "likes": 153,
+         "text": "Passable Gen-Z Rom-Com! Nails the scrolling-generation vibe, but an identity crisis between rom-com and light thriller keeps it from finding its rhythm."},
+        {"handle": "southcinemaaaa", "rating_of_5": None, "sentiment": "mixed", "likes": 32,
+         "text": "Weak Story. Decent setup but the story loses its grip; second-half conflict feels forced."},
+        {"handle": "PsychoViswa", "rating_of_5": None, "sentiment": "negative", "likes": 19,
+         "text": "One of the most unexciting films I've watched this year. Nothing in this film is exciting and nothing makes sense."},
+        {"handle": "TheHinduCinema", "rating_of_5": None, "sentiment": "mixed", "likes": 3,
+         "text": "(The Hindu) Works better as a buddy comedy than a love story and could have benefited from sharper writing."},
+        {"handle": "DeccanChronicle", "rating_of_5": None, "sentiment": "mixed", "likes": 1,
+         "text": "A patchy love story that works in a few comedy portions but falls short on romance and thrill."},
+        {"handle": "idlebrainjeevi", "rating_of_5": None, "sentiment": "positive", "likes": 492,
+         "text": "(idlebrain.com) A fun romantic comedy with a touch of thriller... an entertaining film that has all the ingredients to become a box office hit!"},
+        {"handle": "igtelugu", "rating_of_5": None, "sentiment": "mixed", "likes": 9,
+         "text": "Fun moments & good performances, but mixed writing and editing."},
+    ],
+
+    # Organic audience posts: ordinary viewers reacting after watching, with
+    # promotional-template posts and pure box-office numbers excluded. Two
+    # near-identical "1st half review" posts (ReviewerBossu, PanIndiaReview,
+    # minutes apart) were excluded here and flagged separately below as likely
+    # syndicated content, not independent opinions.
+    "audience_positive": [
+        {"handle": "ssk1122", "likes": 2080, "text": "A mad fun ride and refreshing music. Go with your gang and you'll surely have good laughs."},
+        {"handle": "BheeshmaTalks", "likes": 1020, "text": "Love, Laughter & Loads of Fun! The friends gang and the natural dialogues are the biggest highlights."},
+        {"handle": "chotugadu23", "likes": 756, "text": "First 20 mins chusi mingindi anukuna, tharavatha nunchi pickup aindi. Comedy baga workout aindi. Music fire."},
+        {"handle": "Kilaruness", "likes": 79, "text": "Absolute WINNER!!! A way superior second half than the first, everyone excels, Upendra Limaye is the show stealer."},
+        {"handle": "its_srinu", "likes": 24, "text": "Decent timepass entertainer. Narendra Ravi one man show. Ankunnantha bad ayithe kaadu (not as bad as expected)."},
+        {"handle": "cricketfre64019", "likes": 24, "text": "He literally dominated the hero with his roasting skills and peak timing - he is MVP for the movie."},
+        {"handle": "MysoreeBondaa", "likes": 14, "text": "Hilarious throughout! Narendra's character was too good, music was also really good. Ignore the negativity."},
+        {"handle": "NikhilSalaar", "likes": 37, "text": "1st 20 mins average, once the track kicks in it's full ga navvi theatre lo - full ENE & Jathi Ratnalu vibe. Music was lit."},
+        {"handle": "Rakesh_JournoNK", "likes": 2, "text": "Chala bagundi (very good) - two hours you can peacefully laugh. Nice love story. 8/10"},
+        {"handle": "KausalyaSuhari1", "likes": 5, "text": "Hilarious and fun. Except one gay joke and one woman-related joke, I laughed throughout the movie."},
+        {"handle": "undoneme90", "likes": 2, "text": "Overall good movie, comedy natural ga undi. 7/10"},
+        {"handle": "KJRR_view", "likes": 1, "text": "Very good laughter to watch, super decision in making the movie and giving new talent to the industry."},
+        {"handle": "ganeshraj261", "likes": 1, "text": "Excellent entertainment throughout, no single bored scene."},
+        {"handle": "Udayprince29", "likes": 1, "text": "Low budget movie, good attempt - 1h45mins navvuthune untaru (you'll keep laughing)."},
+        {"handle": "SanthoshMavuri", "likes": 1, "text": "A laugh riot from Scene 1, brilliantly conceived screenplay whose sole goal is to make you laugh."},
+        {"handle": "BigshotX99", "likes": 1, "text": "Better than expected, laughed a lot."},
+        {"handle": "ndkule2", "likes": 4, "text": "Movie ki poyi navvukoni bayataki ocham - what more do you want? Anta worst em ledu (it's not that bad)."},
+        {"handle": "culttttttttttfi", "likes": 2, "text": "Baundi (it's good). First half very nice, second half okayish - much more soothing than the online negativity suggests."},
+    ],
+    "audience_negative": [
+        {"handle": "tweetcherry17", "likes": 4084, "text": "No words .... Only Walkouts"},
+        {"handle": "PBcult______", "likes": 2126, "text": "Mi lanti chetha puk cinema na life lo chudaledhu (never seen such a trashy film in my life)"},
+        {"handle": "Iconic_Powerism", "likes": 467, "text": "Below Avg - Flop Talk"},
+        {"handle": "abhiram2803", "likes": 298, "text": "Cinema ki povali ani undi kani ah reviews chusaka dabbulu bokka anipisthundi (wanted to watch it, but after the reviews I'm scared to spend the money)"},
+        {"handle": "vpraYashboss", "likes": 30, "text": "I wasted my time and money. @imvangasandeep please refund my money"},
+        {"handle": "mass_boy1", "likes": 85, "text": "Sodhi... Sodhi... First half (tedious/boring). Interval track decent."},
+        {"handle": "Sai_1280", "likes": 2, "text": "Vanga ila ra em cinemalu ra nuvvu produce chesedhi (Vanga, what kind of movies are you producing)"},
+        {"handle": "teja_narni", "likes": 1, "text": "Okkadu kuda avathalodu cheppedhi vinnar entraa (nobody understood a word of what was being said)"},
+        {"handle": "RC_diehard_fan", "likes": 1, "text": "Intervel ki bayata vachesa (walked out at the interval)"},
+    ],
+    "audience_mixed": [
+        {"handle": "Sangeetha_Devi", "likes": 7, "text": "Romanchakam was partly fun, partly frustrating."},
+        {"handle": "kaNTRiFan", "likes": 7, "text": "Scrap. Few comedy scenes here and there."},
+        {"handle": "cinemaoodu", "likes": 4, "text": "Bavundhi kaani ekkado edo miss ayndhi (it's good but something's missing somewhere), can't put my finger on it."},
+    ],
+
+    "syndicated_review_pair": {
+        "note": "Two accounts posted near-identical '1st half review' text, 42 minutes apart, on 2 Sep - "
+                "concrete evidence for the 'paid/coordinated review' suspicion raised independently on both "
+                "X and Reddit. Excluded from the organic-audience counts above.",
+        "posts": [
+            {"handle": "ReviewerBossu", "time": "2026-09-02T15:05:42Z", "likes": 150,
+             "text": "First Half Adiripoyindi... The 1-minute friendship monologue by the hero was one of my favourite moments... Potti Saale's character was a highlight! ...So far, it's FUN, FUN & FUN!"},
+            {"handle": "PanIndiaReview", "time": "2026-09-02T15:47:26Z", "likes": 118,
+             "text": "The first half is genuinely entertaining... The 1-minute friendship monologue by the hero was one of my favourite moments... Potti Saale's character is an absolute highlight... So far, it's been FUN, FUN & FUN!"},
+        ],
+    },
+
+    "paid_review_controversy": [
+        {"handle": "manu_antha", "likes": 305, "platform": "X", "text": "Romanchakam is receiving very bad reviews from Telugu accounts. Are they jealous of Sandeep Reddy Vanga's production?"},
+        {"handle": "ShettyTrader", "likes": 148, "platform": "X", "text": "Now which is paid review??"},
+        {"handle": "Nagavamsistan", "likes": 101, "platform": "X", "text": "Genuine review please. Paid one's don't cmt"},
+        {"handle": "telugufab", "likes": 11, "platform": "X", "text": "PAID PRIMER REVIEWS ENTI THEDAGA UNNAI MOVIE ELA UNDHI? (why are the paid premiere reviews so out of step with how the movie actually is)"},
+        {"handle": "Fair_Ad7252", "likes": None, "score": 9, "platform": "Reddit", "text": "Cinemapicha paid positive review. It was so obvious too lol. Just look at his last 4-5 videos."},
+    ],
+
+    "celebrity_endorsements": [
+        {"handle": "urstrulyMahesh", "who": "Mahesh Babu (own verified account)", "likes": 36313, "views": 2711414,
+         "text": "#Romanchakam looks entertaining and promising... Wishing Sandeep, Pranay and the entire team the very best... You can truly see the love, passion and hard work that has gone into this project."},
+        {"handle": "sravan_joshik (re: Vijay Deverakonda)", "who": "Vijay Deverakonda appeared as chief guest at a promo event", "likes": 4688,
+         "text": "Vasthadu - Stage ekkuthadu - Motivation isthadu - Repeat uh. @TheDeverakonda"},
+        {"handle": "RangasthalamIN (re: Vijay Deverakonda)", "who": "Repost of a VD motivational quote at the event", "likes": 168,
+         "text": "\"If you have fire in your heart and belief in yourself, you will definitely succeed.\" - VD, for #Romanchakam"},
+    ],
+
+    "notes": [
+        "Prabhas's support for the film is referenced repeatedly via fan/PR accounts (not sampled from a "
+        "verified Prabhas post directly in this pull) - treated as promotional-layer chatter, not an "
+        "independently verified celebrity endorsement like Mahesh Babu's own tweet above.",
+        "One viewer (UrstruulyDinesh) posted three different reactions across the day - two positive "
+        "('fun ride', 'good first half') and one negative ('teaser's impact didn't land 1% in theatre') - "
+        "a reminder that per-post sentiment is not the same as a single stable per-viewer verdict.",
+    ],
+}
+
+# ---------------------------------------------------------------------------
+# Reddit - r/tollywood release/discussion megathread (via rdt-cli)
+# ---------------------------------------------------------------------------
+
+REDDIT = {
+    "subreddit": "r/tollywood",
+    "thread_title": "Romanchakam (2026) - Review/Discussion Thread. SPOILERS MUST BE TAGGED",
+    "thread_score": 54,
+    "reddit_reported_comments": 60,
+    "comments_read": 57,
+    "opinion_bearing_voices": 16,
+    "excluded_reason": "AutoModerator, deleted/removed comments, pure tangents (questions, sarcasm-only "
+                        "exchanges, translation-quality asides) carry no view on the film and are excluded",
+    "sentiment_counts": {"negative": 13, "mixed": 1, "positive": 2},
+    "positive": [
+        {"handle": "Constant_Fee_7569", "score": 0, "text": "Bagundi..good watch with batch. I loved the friends performance particularly chintu guy..chala baga chesadu. Simple story with lot of cute sweet moments..teens ki baga ekkestadi"},
+        {"handle": "TheGoatedGoose", "score": -5, "text": "I don't think it was that bad as the reviews here say lol"},
+    ],
+    "mixed": [
+        {"handle": "No-Anteater-8750", "score": 8, "text": "Not a great movie. Main drawback is the hero - heavily imitated Naveen Polishetty's mannerisms and dialogue delivery... Overall, an average movie."},
+    ],
+    "negative": [
+        {"handle": "ForKobeeeeeeeeeeeee", "score": 78, "text": "Nachaledu bro (didn't like it). Over-promoted film with awful writing and cringe comedy attempts. BGM is non-existent. Please don't expect another Little Hearts or Jathi Ratnalu."},
+        {"handle": "Cold_Addition_8392", "score": 35, "text": "Very disappointing. Mosttt boring 2nd half. Asal ekkadekkadiko elthadu (the plot wanders everywhere) - find her, find yourself, parents' love, girls' greatness... where is it all going?"},
+        {"handle": "mohammedvf334", "score": 29, "text": "This is for sure a tax evasion project to show a flop and keep the profits from Animal. Trailer thone decided bisket project ani!!"},
+        {"handle": "Positive-String-9364", "score": 1, "text": "Horrible writing n literally a waste of time... no content, no curiosity, no entertainment, no good music. I m honestly wondering why was this movie made."},
+        {"handle": "pru7674", "score": 27, "text": "One of the worst movies I've ever seen. No plot, no coherence, nothing makes sense in the movie."},
+        {"handle": "Lost_Possible_973", "score": 24, "text": "Romanchakam (X) Virochanam (checkmark) - unfavorable comparison to another film released the same week"},
+        {"handle": "LoneWolf_5101", "score": 9, "text": "Veedu movies aapesthe baguntadhi (it would be better if he stopped making movies)"},
+        {"handle": "No-Location355", "score": 7, "text": "Pagalabadi navvina naaku navvu aaguthale annadu vanga (Vanga said we'd laugh our heads off, but I couldn't stop myself from not laughing)"},
+        {"handle": "jannik_alcaraz", "score": 4, "text": "Endo sodhi boring outdated stuff! Hardly 1/5"},
+        {"handle": "qwerty66669999", "score": 4, "text": "Hands down, the single most stupidest movie of the year. 142 minutes felt like nails on a chalkboard."},
+        {"handle": "Worried-Two-128", "score": 6, "text": "Chetha ga undi (it's trash)... comedy didn't work... every character is brainless... it tried to be a comedy film more than a romantic film."},
+        {"handle": "Hyd_Deity", "score": 121, "text": "Netflix lo vacchinaka skip chesta (I'll skip it and watch on Netflix when it comes)"},
+        {"handle": "EzekielElliot67", "score": -6, "text": "Vanga kabati misogynistic quotes, alpha male mass sequences, Andrew Tate suktulu expect chesa... Heavily disappointed af."},
+    ],
+}
+
+# ---------------------------------------------------------------------------
+# Box office (from X posts by box-office tracker accounts, cross-checked
+# across independent trackers where possible)
+# ---------------------------------------------------------------------------
+
+BOX_OFFICE = {
+    "day1_india_nett_cr": {"low": 1.45, "high": 2.00, "trackers": ["BoxofficeIn24", "TheCineNation", "theCinemaIP", "chitrambhalareI"]},
+    "day1_shows": 1394,
+    "day1_telangana_vs_ap": {
+        "telangana_share_pct": "roughly two-thirds of All-India gross",
+        "sources": ["TheCineNation (TG Rs1.12 Cr vs AP Rs50L)", "Venky_BO/Telangana_BO (TG Rs1.17-1.25 Cr, AP disappointing)"],
+    },
+    "tickets_first_24h": {"bookmyshow": "38.66K-38.86K", "district_app": "75K+"},
+    "usa": {"premiere_day_gross": "$41K (Wednesday premieres)", "growing_to": "$70K+ and counting by Day 2"},
+    "uk": {"note": "Cineworld Ilford, Hounslow, O2 Greenwich reported fast-filling/near-full; an extra show "
+                   "was added at Hounslow's Super Screen on demand"},
+    "caveat": "Day-1 gross varies by Rs0.3-0.5 Cr across trackers (typical for unaudited early estimates) - "
+              "treat as a directional range, not an audited figure. All box-office figures here come from "
+              "the promotional/trade layer on X, not an independent trade source.",
+}
+
+# ---------------------------------------------------------------------------
+# Derived / combined output
+# ---------------------------------------------------------------------------
+
+def pct(part, total):
+    return round(100 * part / total, 1) if total else 0.0
+
+
+def build():
+    reviews = X["reviews_sample"]
+    review_ratings = [r["rating_of_5"] for r in reviews if r["rating_of_5"] is not None]
+    review_sent_counts = {"negative": 0, "mixed": 0, "positive": 0}
+    for r in reviews:
+        review_sent_counts[r["sentiment"]] += 1
+    review_total = sum(review_sent_counts.values())
+
+    aud_counts = {
+        "positive": len(X["audience_positive"]),
+        "negative": len(X["audience_negative"]),
+        "mixed": len(X["audience_mixed"]),
+    }
+    aud_total = sum(aud_counts.values())
+
+    reddit_total = sum(REDDIT["sentiment_counts"].values())
+
+    sentiment_analysis = {
+        "x_press_reviews": {
+            "n": review_total,
+            "avg_rating_of_5": round(sum(review_ratings) / len(review_ratings), 2) if review_ratings else None,
+            "n_with_numeric_rating": len(review_ratings),
+            "counts": review_sent_counts,
+            "pct": {k: pct(v, review_total) for k, v in review_sent_counts.items()},
+            "caution": "A curated sample of press/critic outlets and rating-giving reviewers found in the X "
+                       "pull, not a census of Telugu film criticism.",
+        },
+        "x_organic_audience": {
+            "n": aud_total,
+            "counts": aud_counts,
+            "pct": {k: pct(v, aud_total) for k, v in aud_counts.items()},
+            "caution": "Curated opinion-bearing sample from a much larger raw pull (516 unique posts) that is "
+                       "dominated by studio/PR/trade-wire volume and box-office numbers, both excluded here. "
+                       "Treat percentages as directional, not census-grade.",
+        },
+        "reddit": {
+            "n": reddit_total,
+            "counts": REDDIT["sentiment_counts"],
+            "pct": {k: pct(v, reddit_total) for k, v in REDDIT["sentiment_counts"].items()},
+        },
+    }
+
+    top_contributors = {
+        "x_press_reviews": reviews,
+        "x_audience_positive": X["audience_positive"],
+        "x_audience_negative": X["audience_negative"],
+        "x_audience_mixed": X["audience_mixed"],
+        "reddit_positive": REDDIT["positive"],
+        "reddit_mixed": REDDIT["mixed"],
+        "reddit_negative": REDDIT["negative"],
+    }
+
+    combined = {
+        "film": FILM,
+        "x": X,
+        "reddit": REDDIT,
+        "box_office": BOX_OFFICE,
+        "methodology": {
+            "x_source": "User-scraped X data, two pulls (86 + 453 posts) deduped by link to 516 unique posts.",
+            "reddit_source": "rdt-cli against the r/tollywood release megathread (top-sorted, 300-comment limit, "
+                              "expand-more) - 57 of 60 reported comments retrieved.",
+            "capture_window": FILM["capture_window"],
+            "limitations": [
+                "X sentiment splits (press reviews n=19, organic audience n=30) are curated opinion-bearing "
+                "samples pulled out of a 516-post corpus dominated by studio/PR templates and box-office "
+                "tracker numbers (both excluded and reported separately) - not the full population.",
+                "Box-office figures come entirely from the promotional/trade layer on X, not an audited trade "
+                "source, and vary by up to Rs0.5 Cr across trackers for the same day.",
+                "Two 'audience review' posts (ReviewerBossu, PanIndiaReview) were found to share near-identical "
+                "phrasing posted 42 minutes apart - excluded from the organic count and flagged as likely "
+                "syndicated/coordinated content, which is itself evidence for the 'paid review' suspicion "
+                "raised independently by other users on both X and Reddit.",
+                "YouTube and Google Trends were not part of this pull (X + Reddit only, per the data provided); "
+                "a future pass could add them for a fuller picture.",
+                "Reddit's own comment count (60) exceeds what rdt-cli returned (57) - a handful of comments "
+                "may be missing (e.g. very recent additions at capture time).",
+            ],
+        },
+    }
+
+    (OUT / "film_data.json").write_text(json.dumps(FILM, indent=2, ensure_ascii=False), encoding="utf-8")
+    (OUT / "sentiment_analysis.json").write_text(json.dumps(sentiment_analysis, indent=2, ensure_ascii=False), encoding="utf-8")
+    (OUT / "top_contributors.json").write_text(json.dumps(top_contributors, indent=2, ensure_ascii=False), encoding="utf-8")
+    (OUT / "combined_analysis.json").write_text(json.dumps(combined, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    print("Wrote film_data.json, sentiment_analysis.json, top_contributors.json, combined_analysis.json")
+    print(f"Press reviews: {review_total} -> {sentiment_analysis['x_press_reviews']['pct']} (avg {sentiment_analysis['x_press_reviews']['avg_rating_of_5']}/5)")
+    print(f"X organic audience: {aud_total} -> {sentiment_analysis['x_organic_audience']['pct']}")
+    print(f"Reddit: {reddit_total} -> {sentiment_analysis['reddit']['pct']}")
+
+
+if __name__ == "__main__":
+    build()

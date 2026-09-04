@@ -1,0 +1,45 @@
+{
+  "x_press_reviews": {
+    "n": 19,
+    "avg_rating_of_5": 2.39,
+    "n_with_numeric_rating": 11,
+    "counts": {
+      "negative": 7,
+      "mixed": 11,
+      "positive": 1
+    },
+    "pct": {
+      "negative": 36.8,
+      "mixed": 57.9,
+      "positive": 5.3
+    },
+    "caution": "A curated sample of press/critic outlets and rating-giving reviewers found in the X pull, not a census of Telugu film criticism."
+  },
+  "x_organic_audience": {
+    "n": 30,
+    "counts": {
+      "positive": 18,
+      "negative": 9,
+      "mixed": 3
+    },
+    "pct": {
+      "positive": 60.0,
+      "negative": 30.0,
+      "mixed": 10.0
+    },
+    "caution": "Curated opinion-bearing sample from a much larger raw pull (516 unique posts) that is dominated by studio/PR/trade-wire volume and box-office numbers, both excluded here. Treat percentages as directional, not census-grade."
+  },
+  "reddit": {
+    "n": 16,
+    "counts": {
+      "negative": 13,
+      "mixed": 1,
+      "positive": 2
+    },
+    "pct": {
+      "negative": 81.2,
+      "mixed": 6.2,
+      "positive": 12.5
+    }
+  }
+}
