@@ -1,0 +1,887 @@
+{
+  "scope": {
+    "start": "2026-01-01",
+    "end": "2026-10-01",
+    "geography": "Worldwide",
+    "display_timezone": "Asia/Kolkata",
+    "capture_date": "2026-10-01",
+    "cutoff_note": "October 1 is incomplete. Official poster UTC timestamp is Dec 31 at 18:30, Jan 1 at 00:00 IST. Reddit launch thread starts one minute before this boundary."
+  },
+  "x_sample": {
+    "input_sha256": "a226bf3e621d174498b52bae3512da2726dc82781db83427624d6e43ec3d627b",
+    "supplied_rows": 375,
+    "unique_links": 375,
+    "within_ist_window": 277,
+    "monthly_coverage": {
+      "2026-01": 19,
+      "2026-02": 9,
+      "2026-03": 2,
+      "2026-04": 0,
+      "2026-05": 5,
+      "2026-06": 5,
+      "2026-07": 2,
+      "2026-08": 14,
+      "2026-09": 207,
+      "2026-10": 14
+    },
+    "warning": "These are supplied rows, including search false positives and adjacent film chatter, not total monthly X volume. Counts describe coverage only. No sentiment percentages derived."
+  },
+  "x_posts": [
+    {
+      "id": "2006432716632604832",
+      "date_utc": "2025-12-31T18:30:12.000Z",
+      "date_ist": "2026-01-01T00:00:12+05:30",
+      "url": "https://x.com/InSpiritMode/status/2006432716632604832",
+      "handle": "InSpiritMode",
+      "title": "First poster",
+      "role": "Official film account",
+      "summary": "New Year reveal with Prabhas and Triptii Dimri.",
+      "kind": "reveal",
+      "likes": 111999,
+      "reposts": 23778,
+      "views": 4704444,
+      "counter_source": "Authenticated X DOM in Brave, Oct 1, 2026; cumulative counters"
+    },
+    {
+      "id": "2012140504977432682",
+      "date_utc": "2026-01-16T12:30:54.000Z",
+      "date_ist": "2026-01-16T18:00:54+05:30",
+      "url": "https://x.com/InSpiritMode/status/2012140504977432682",
+      "handle": "InSpiritMode",
+      "title": "March 5, 2027 announced",
+      "role": "Official film account",
+      "summary": "Film account announces worldwide theatrical date.",
+      "kind": "reveal",
+      "likes": 30471,
+      "reposts": 6745,
+      "views": 955556,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2012140526120870069",
+      "date_utc": "2026-01-16T12:30:59.000Z",
+      "date_ist": "2026-01-16T18:00:59+05:30",
+      "url": "https://x.com/imvangasandeep/status/2012140526120870069",
+      "handle": "imvangasandeep",
+      "title": "Release date",
+      "role": "Director",
+      "summary": "Director publishes the release-date graphic.",
+      "kind": "reveal",
+      "likes": 85570,
+      "reposts": 14974,
+      "views": 4300844,
+      "counter_source": "Authenticated X DOM in Brave, Oct 1, 2026; cumulative counters"
+    },
+    {
+      "id": "2020779344831111328",
+      "date_utc": "2026-02-09T08:38:34.000Z",
+      "date_ist": "2026-02-09T14:08:34+05:30",
+      "url": "https://x.com/prakashraaj/status/2020779344831111328",
+      "handle": "prakashraaj",
+      "title": "Prakash Raj responds",
+      "role": "Cast member at the time",
+      "summary": "Rejects speculation about his scenes before they began. Later casting evidence supersedes this February position.",
+      "kind": "correction",
+      "likes": 24082,
+      "reposts": 3324,
+      "views": 1831552,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2027346097929404855",
+      "date_utc": "2026-02-27T11:32:30.000Z",
+      "date_ist": "2026-02-27T17:02:30+05:30",
+      "url": "https://x.com/InSpiritMode/status/2027346097929404855",
+      "handle": "InSpiritMode",
+      "title": "Antagonist poster rollout",
+      "role": "Official film account",
+      "summary": "Film campaign publishes Vivek Oberoi poster.",
+      "kind": "reveal",
+      "likes": 30481,
+      "reposts": 6772,
+      "views": 1238477,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2027349795699044393",
+      "date_utc": "2026-02-27T11:47:12.000Z",
+      "date_ist": "2026-02-27T17:17:12+05:30",
+      "url": "https://x.com/imvangasandeep/status/2027349795699044393",
+      "handle": "imvangasandeep",
+      "title": "Vivek Oberoi reveal",
+      "role": "Director",
+      "summary": "Officially introduces the antagonist.",
+      "kind": "reveal",
+      "likes": 84257,
+      "reposts": 10494,
+      "views": 2563823,
+      "counter_source": "Authenticated X DOM in Brave, Oct 1, 2026; cumulative counters"
+    },
+    {
+      "id": "2029096921529462829",
+      "date_utc": "2026-03-04T07:29:39.000Z",
+      "date_ist": "2026-03-04T12:59:39+05:30",
+      "url": "https://x.com/TrendsPrabhas/status/2029096921529462829",
+      "handle": "TrendsPrabhas",
+      "title": "BookMyShow interest claim",
+      "role": "Fan account",
+      "summary": "Claims 100K interests; historical BookMyShow counter was not independently recovered.",
+      "kind": "unverified",
+      "likes": 2221,
+      "reposts": 877,
+      "views": 42954,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2051959985777848417",
+      "date_utc": "2026-05-06T09:39:18.000Z",
+      "date_ist": "2026-05-06T15:09:18+05:30",
+      "url": "https://x.com/taran_adarsh/status/2051959985777848417",
+      "handle": "taran_adarsh",
+      "title": "May date clarification",
+      "role": "Trade analyst",
+      "summary": "Relays makers reaffirming March 5, 2027.",
+      "kind": "correction",
+      "likes": 9739,
+      "reposts": 1571,
+      "views": 401766,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2061886457816752574",
+      "date_utc": "2026-06-02T19:03:34.000Z",
+      "date_ist": "2026-06-03T00:33:34+05:30",
+      "url": "https://x.com/TrendsPrabhas/status/2061886457816752574",
+      "handle": "TrendsPrabhas",
+      "title": "Shooting photo circulated",
+      "role": "Fan account",
+      "summary": "Shares a purported on-set photo; use as fan discussion, not an authenticated production bulletin.",
+      "kind": "unverified",
+      "likes": 3981,
+      "reposts": 1064,
+      "views": 84314,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2079498470902333824",
+      "date_utc": "2026-07-21T09:27:25.000Z",
+      "date_ist": "2026-07-21T14:57:25+05:30",
+      "url": "https://x.com/peoplemediafcy/status/2079498470902333824",
+      "handle": "peoplemediafcy",
+      "title": "Karnataka distribution",
+      "role": "Distributor",
+      "summary": "People Media Factory announces a Karnataka distribution partnership with Asian Suresh.",
+      "kind": "announcement",
+      "likes": 8524,
+      "reposts": 1390,
+      "views": 699319,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2091079429443445147",
+      "date_utc": "2026-08-22T08:26:01.000Z",
+      "date_ist": "2026-08-22T13:56:01+05:30",
+      "url": "https://x.com/TSeries/status/2091079429443445147",
+      "handle": "TSeries",
+      "title": "Birthday footage",
+      "role": "Producer",
+      "summary": "T-Series shares a moment from the Spirit launch journey for Chiranjeevi's birthday.",
+      "kind": "campaign",
+      "likes": 8945,
+      "reposts": 854,
+      "views": 180666,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2092277181871440153",
+      "date_utc": "2026-08-25T15:45:27.000Z",
+      "date_ist": "2026-08-25T21:15:27+05:30",
+      "url": "https://x.com/InSpiritMode/status/2092277181871440153",
+      "handle": "InSpiritMode",
+      "title": "August Spirit post",
+      "role": "Official film account",
+      "summary": "Short video campaign post. Content not treated as a teaser without inspecting the video.",
+      "kind": "campaign",
+      "likes": 23004,
+      "reposts": 4143,
+      "views": 589959,
+      "counter_source": "Authenticated X DOM in Brave, Oct 1, 2026; cumulative counters"
+    },
+    {
+      "id": "2094778867408093318",
+      "date_utc": "2026-09-01T13:26:15.000Z",
+      "date_ist": "2026-09-01T18:56:15+05:30",
+      "url": "https://x.com/VangaPictures/status/2094778867408093318",
+      "handle": "VangaPictures",
+      "title": "Romanchakam crossover",
+      "role": "Producer",
+      "summary": "Romanchakam publicity uses Spirit wordplay; not a new Spirit asset.",
+      "kind": "crossover",
+      "likes": 15847,
+      "reposts": 3382,
+      "views": 605368,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2101324821468729759",
+      "date_utc": "2026-09-19T14:57:32.000Z",
+      "date_ist": "2026-09-19T20:27:32+05:30",
+      "url": "https://x.com/imvangasandeep/status/2101324821468729759",
+      "handle": "imvangasandeep",
+      "title": "September wordplay",
+      "role": "Director",
+      "summary": "Links a political response about a Warangal airport to a line in Spirit. High visibility, no fresh film footage.",
+      "kind": "crossover",
+      "likes": 34644,
+      "reposts": 3878,
+      "views": 2061422,
+      "counter_source": "Authenticated X DOM in Brave, Oct 1, 2026; cumulative counters"
+    },
+    {
+      "id": "2101360229757907305",
+      "date_utc": "2026-09-19T17:18:14.000Z",
+      "date_ist": "2026-09-19T22:48:14+05:30",
+      "url": "https://x.com/InSpiritMode/status/2101360229757907305",
+      "handle": "InSpiritMode",
+      "title": "Film account wordplay",
+      "role": "Official film account",
+      "summary": "Brief September caption reuses the Spirit phrase.",
+      "kind": "campaign",
+      "likes": 20932,
+      "reposts": 3340,
+      "views": 567277,
+      "counter_source": "Authenticated X DOM in Brave, Oct 1, 2026; cumulative counters"
+    },
+    {
+      "id": "2102343864577069109",
+      "date_utc": "2026-09-22T10:26:51.000Z",
+      "date_ist": "2026-09-22T15:56:51+05:30",
+      "url": "https://x.com/M9News_/status/2102343864577069109",
+      "handle": "M9News_",
+      "title": "October release claim",
+      "role": "News / trade page",
+      "summary": "M9 reports a Fauzi/Spirit date shuffle, calling it an inside scoop for now. No maker confirmation retrieved.",
+      "kind": "unverified",
+      "likes": 2708,
+      "reposts": 256,
+      "views": 108052,
+      "counter_source": "Authenticated X DOM in Brave, Oct 1, 2026; cumulative counters"
+    },
+    {
+      "id": "2102431879375040899",
+      "date_utc": "2026-09-22T16:16:35.000Z",
+      "date_ist": "2026-09-22T21:46:35+05:30",
+      "url": "https://x.com/celluloidpanda/status/2102431879375040899",
+      "handle": "celluloidpanda",
+      "title": "Fan-created video",
+      "role": "Fan / creator",
+      "summary": "Creator says the video took four days to make. Shows continued fan participation.",
+      "kind": "anticipation",
+      "likes": 8755,
+      "reposts": 1673,
+      "views": 249353,
+      "counter_source": "Authenticated X DOM in Brave, Oct 1, 2026; cumulative counters"
+    },
+    {
+      "id": "2102908040047632870",
+      "date_utc": "2026-09-23T23:48:41.000Z",
+      "date_ist": "2026-09-24T05:18:41+05:30",
+      "url": "https://x.com/KvC077/status/2102908040047632870",
+      "handle": "KvC077",
+      "title": "Adult-action anticipation",
+      "role": "Audience / fan",
+      "summary": "Calls Spirit a highly anticipated adult-rated film. This is opinion, not verified certification or a ranking.",
+      "kind": "anticipation",
+      "likes": 5959,
+      "reposts": 213,
+      "views": 119395,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2103334291476476393",
+      "date_utc": "2026-09-25T04:02:27.000Z",
+      "date_ist": "2026-09-25T09:32:27+05:30",
+      "url": "https://x.com/RGVzoomin/status/2103334291476476393",
+      "handle": "RGVzoomin",
+      "title": "RGV social post",
+      "role": "Filmmaker / public figure",
+      "summary": "Photo with Vanga and a Spirit pun; not a production announcement.",
+      "kind": "crossover",
+      "likes": 24656,
+      "reposts": 1507,
+      "views": 884008,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2103339981196718371",
+      "date_utc": "2026-09-25T04:25:04.000Z",
+      "date_ist": "2026-09-25T09:55:04+05:30",
+      "url": "https://x.com/Filmyscoopss/status/2103339981196718371",
+      "handle": "Filmyscoopss",
+      "title": "Conflicting release windows",
+      "role": "News / film page",
+      "summary": "Discusses June, August and October 2027 possibilities and acknowledges no exact date confirmation.",
+      "kind": "unverified",
+      "likes": 648,
+      "reposts": 43,
+      "views": 13955,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2104450531876032920",
+      "date_utc": "2026-09-28T05:58:00.000Z",
+      "date_ist": "2026-09-28T11:28:00+05:30",
+      "url": "https://x.com/greatandhranews/status/2104450531876032920",
+      "handle": "greatandhranews",
+      "title": "Spirit before Fauzi claim",
+      "role": "News / trade page",
+      "summary": "Reports Prabhas may prefer Spirit to precede Fauzi; not an announced schedule change.",
+      "kind": "unverified",
+      "likes": 4026,
+      "reposts": 570,
+      "views": 150881,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2104796211505135752",
+      "date_utc": "2026-09-29T04:51:36.000Z",
+      "date_ist": "2026-09-29T10:21:36+05:30",
+      "url": "https://x.com/MrSpiritFan/status/2104796211505135752",
+      "handle": "MrSpiritFan",
+      "title": "Anil Kapoor casting claim",
+      "role": "Fan account",
+      "summary": "Repeats alleged casting replacement; not maker-confirmed in this audit.",
+      "kind": "unverified",
+      "likes": 5495,
+      "reposts": 395,
+      "views": 141297,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    },
+    {
+      "id": "2105516097005043808",
+      "date_utc": "2026-10-01T04:32:10.000Z",
+      "date_ist": "2026-10-01T10:02:10+05:30",
+      "url": "https://x.com/imVicky____/status/2105516097005043808",
+      "handle": "imVicky____",
+      "title": "Birthday-month anticipation",
+      "role": "Fan account",
+      "summary": "Anticipates October 23 updates across Prabhas projects. No official Spirit birthday asset announced here.",
+      "kind": "anticipation",
+      "likes": 157,
+      "reposts": 40,
+      "views": 964,
+      "counter_source": "User-supplied snapshot; captured no later than Oct 1, 2026; exact extraction time not documented"
+    }
+  ],
+  "reddit": {
+    "search_slices": [
+      {
+        "slice": "reddit-bolly-new",
+        "rows": 67
+      },
+      {
+        "slice": "reddit-bolly-top",
+        "rows": 67
+      },
+      {
+        "slice": "reddit-tollywood-new",
+        "rows": 100
+      },
+      {
+        "slice": "reddit-tollywood-top",
+        "rows": 100
+      }
+    ],
+    "unique_search_results": 215,
+    "threads": [
+      {
+        "id": "1q0jxbc",
+        "subreddit": "tollywood",
+        "title": "Spirit first look",
+        "url": "https://www.reddit.com/r/tollywood/comments/1q0jxbc/spirit_first_look/",
+        "posted_utc": "2025-12-31T18:29:13+00:00",
+        "score": 3288,
+        "comments_reported": 377,
+        "comments_retrieved": 76,
+        "deleted_or_removed": 5,
+        "method": "rdt read, top sort, limit 60 (first-look thread limit 80); selected high-score comments reviewed qualitatively"
+      },
+      {
+        "id": "1q2v0e5",
+        "subreddit": "BollyBlindsNGossip",
+        "title": "What exactly is Vanga cooking with Spirit?",
+        "url": "https://www.reddit.com/r/BollyBlindsNGossip/comments/1q2v0e5/what_exactly_is_vanga_cooking_with_spirit/",
+        "posted_utc": "2026-01-03T13:46:48+00:00",
+        "score": 502,
+        "comments_reported": 233,
+        "comments_retrieved": 58,
+        "deleted_or_removed": 6,
+        "method": "rdt read, top sort, limit 60 (first-look thread limit 80); selected high-score comments reviewed qualitatively"
+      },
+      {
+        "id": "1rg4ae4",
+        "subreddit": "tollywood",
+        "title": "Power || Intensity || Swag  Presenting Vivek Oberois 1st LOOK from #Spirit",
+        "url": "https://www.reddit.com/r/tollywood/comments/1rg4ae4/power_intensity_swag_presenting_vivek_oberois_1st/",
+        "posted_utc": "2026-02-27T11:32:50+00:00",
+        "score": 477,
+        "comments_reported": 112,
+        "comments_retrieved": 57,
+        "deleted_or_removed": 0,
+        "method": "rdt read, top sort, limit 60 (first-look thread limit 80); selected high-score comments reviewed qualitatively"
+      },
+      {
+        "id": "1vtm5m3",
+        "subreddit": "tollywood",
+        "title": "Spirit Producer addresses Don Lee rumors and confirms Prakash Raj's exit",
+        "url": "https://www.reddit.com/r/tollywood/comments/1vtm5m3/spirit_producer_addresses_don_lee_rumors_and/",
+        "posted_utc": "2026-08-20T15:09:40+00:00",
+        "score": 167,
+        "comments_reported": 88,
+        "comments_retrieved": 55,
+        "deleted_or_removed": 3,
+        "method": "rdt read, top sort, limit 60 (first-look thread limit 80); selected high-score comments reviewed qualitatively"
+      },
+      {
+        "id": "1vtqio6",
+        "subreddit": "BollyBlindsNGossip",
+        "title": "Producer Pranay Reddy Vanga Opens Up on Deepikas Spirit Exit",
+        "url": "https://www.reddit.com/r/BollyBlindsNGossip/comments/1vtqio6/producer_pranay_reddy_vanga_opens_up_on_deepikas/",
+        "posted_utc": "2026-08-20T17:47:44+00:00",
+        "score": 456,
+        "comments_reported": 296,
+        "comments_retrieved": 57,
+        "deleted_or_removed": 3,
+        "method": "rdt read, top sort, limit 60 (first-look thread limit 80); selected high-score comments reviewed qualitatively"
+      },
+      {
+        "id": "1wbkgc4",
+        "subreddit": "BollyBlindsNGossip",
+        "title": "PRABHAS AND POSTPONEMENTS!",
+        "url": "https://www.reddit.com/r/BollyBlindsNGossip/comments/1wbkgc4/prabhas_and_postponements/",
+        "posted_utc": "2026-09-09T12:39:55+00:00",
+        "score": 196,
+        "comments_reported": 44,
+        "comments_retrieved": 42,
+        "deleted_or_removed": 1,
+        "method": "rdt read, top sort, limit 60 (first-look thread limit 80); selected high-score comments reviewed qualitatively"
+      },
+      {
+        "id": "1weaq3i",
+        "subreddit": "BollyBlindsNGossip",
+        "title": "Sandeep Reddy Vangas brother throws open a challenge to film critics for Spirit movie starring Prabhas",
+        "url": "https://www.reddit.com/r/BollyBlindsNGossip/comments/1weaq3i/sandeep_reddy_vangas_brother_throws_open_a/",
+        "posted_utc": "2026-09-12T11:59:13+00:00",
+        "score": 351,
+        "comments_reported": 130,
+        "comments_retrieved": 60,
+        "deleted_or_removed": 2,
+        "method": "rdt read, top sort, limit 60 (first-look thread limit 80); selected high-score comments reviewed qualitatively"
+      },
+      {
+        "id": "1wsfr2c",
+        "subreddit": "tollywood",
+        "title": "Wts ur thoughts on this",
+        "url": "https://www.reddit.com/r/tollywood/comments/1wsfr2c/wts_ur_thoughts_on_this/",
+        "posted_utc": "2026-09-28T14:13:32+00:00",
+        "score": 56,
+        "comments_reported": 33,
+        "comments_retrieved": 32,
+        "deleted_or_removed": 0,
+        "method": "rdt read, top sort, limit 60 (first-look thread limit 80); selected high-score comments reviewed qualitatively"
+      }
+    ],
+    "comments_retrieved": 437,
+    "warning": "Selected threads and top comments are purposive samples. Subreddits do not identify nationality, language, gender or theater-going intent. Scores are net votes, not approval or audience size."
+  },
+  "trends": {
+    "geography": "Worldwide",
+    "category": "All categories",
+    "search_type": "Web Search",
+    "queries": [
+      "Spirit Prabhas",
+      "spirit 2027"
+    ],
+    "normalization": "Separate exports, each independently scaled 0-100. Never compare their index levels as relative volumes. Week labels retained exactly; boundary and partial weeks excluded from complete-week comparisons.",
+    "primary_capture": "CSV exported through Google Trends UI in Brave; checked against visible table.",
+    "alternate_capture": "Visible Google Trends table in Brave; CSV action was blocked by Brave, so transcribed observed values.",
+    "weekly": [
+      {
+        "week": "2025-12-28",
+        "spirit_prabhas": 100,
+        "spirit_2027": 6,
+        "boundary": true,
+        "partial": false
+      },
+      {
+        "week": "2026-01-04",
+        "spirit_prabhas": 61,
+        "spirit_2027": 5,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-01-11",
+        "spirit_prabhas": 39,
+        "spirit_2027": 9,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-01-18",
+        "spirit_prabhas": 20,
+        "spirit_2027": 10,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-01-25",
+        "spirit_prabhas": 17,
+        "spirit_2027": 11,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-02-01",
+        "spirit_prabhas": 11,
+        "spirit_2027": 11,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-02-08",
+        "spirit_prabhas": 9,
+        "spirit_2027": 8,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-02-15",
+        "spirit_prabhas": 8,
+        "spirit_2027": 11,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-02-22",
+        "spirit_prabhas": 14,
+        "spirit_2027": 14,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-03-01",
+        "spirit_prabhas": 11,
+        "spirit_2027": 11,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-03-08",
+        "spirit_prabhas": 9,
+        "spirit_2027": 12,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-03-15",
+        "spirit_prabhas": 9,
+        "spirit_2027": 13,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-03-22",
+        "spirit_prabhas": 9,
+        "spirit_2027": 12,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-03-29",
+        "spirit_prabhas": 10,
+        "spirit_2027": 17,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-04-05",
+        "spirit_prabhas": 9,
+        "spirit_2027": 14,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-04-12",
+        "spirit_prabhas": 7,
+        "spirit_2027": 14,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-04-19",
+        "spirit_prabhas": 7,
+        "spirit_2027": 16,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-04-26",
+        "spirit_prabhas": 7,
+        "spirit_2027": 18,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-05-03",
+        "spirit_prabhas": 6,
+        "spirit_2027": 22,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-05-10",
+        "spirit_prabhas": 9,
+        "spirit_2027": 18,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-05-17",
+        "spirit_prabhas": 6,
+        "spirit_2027": 19,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-05-24",
+        "spirit_prabhas": 6,
+        "spirit_2027": 23,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-05-31",
+        "spirit_prabhas": 11,
+        "spirit_2027": 27,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-06-07",
+        "spirit_prabhas": 8,
+        "spirit_2027": 26,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-06-14",
+        "spirit_prabhas": 8,
+        "spirit_2027": 28,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-06-21",
+        "spirit_prabhas": 11,
+        "spirit_2027": 29,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-06-28",
+        "spirit_prabhas": 6,
+        "spirit_2027": 32,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-07-05",
+        "spirit_prabhas": 8,
+        "spirit_2027": 36,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-07-12",
+        "spirit_prabhas": 9,
+        "spirit_2027": 28,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-07-19",
+        "spirit_prabhas": 7,
+        "spirit_2027": 35,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-07-26",
+        "spirit_prabhas": 7,
+        "spirit_2027": 41,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-08-02",
+        "spirit_prabhas": 6,
+        "spirit_2027": 39,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-08-09",
+        "spirit_prabhas": 9,
+        "spirit_2027": 98,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-08-16",
+        "spirit_prabhas": 10,
+        "spirit_2027": 100,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-08-23",
+        "spirit_prabhas": 14,
+        "spirit_2027": 27,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-08-30",
+        "spirit_prabhas": 11,
+        "spirit_2027": 51,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-09-06",
+        "spirit_prabhas": 7,
+        "spirit_2027": 62,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-09-13",
+        "spirit_prabhas": 8,
+        "spirit_2027": 41,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-09-20",
+        "spirit_prabhas": 6,
+        "spirit_2027": 21,
+        "boundary": false,
+        "partial": false
+      },
+      {
+        "week": "2026-09-27",
+        "spirit_prabhas": 5,
+        "spirit_2027": 19,
+        "boundary": false,
+        "partial": true
+      }
+    ],
+    "regions": [
+      {
+        "country": "India",
+        "index": "100"
+      },
+      {
+        "country": "Pakistan",
+        "index": "92"
+      },
+      {
+        "country": "Sri Lanka",
+        "index": "76"
+      },
+      {
+        "country": "United Arab Emirates",
+        "index": "53"
+      },
+      {
+        "country": "Nepal",
+        "index": "53"
+      },
+      {
+        "country": "Bangladesh",
+        "index": "46"
+      },
+      {
+        "country": "Singapore",
+        "index": "23"
+      },
+      {
+        "country": "Malaysia",
+        "index": "15"
+      },
+      {
+        "country": "South Korea",
+        "index": "15"
+      },
+      {
+        "country": "Canada",
+        "index": "15"
+      },
+      {
+        "country": "Saudi Arabia",
+        "index": "15"
+      },
+      {
+        "country": "Australia",
+        "index": "15"
+      },
+      {
+        "country": "Nigeria",
+        "index": "7"
+      },
+      {
+        "country": "United States",
+        "index": "7"
+      },
+      {
+        "country": "United Kingdom",
+        "index": "7"
+      },
+      {
+        "country": "Taiwan",
+        "index": "<1"
+      },
+      {
+        "country": "Germany",
+        "index": "<1"
+      },
+      {
+        "country": "Japan",
+        "index": "<1"
+      },
+      {
+        "country": "Italy",
+        "index": "<1"
+      },
+      {
+        "country": "Indonesia",
+        "index": "<1"
+      },
+      {
+        "country": "France",
+        "index": "<1"
+      },
+      {
+        "country": "Brazil",
+        "index": "<1"
+      }
+    ],
+    "warning": "English query terms miss native-script searches; related-query results include unrelated terms. Regional indices measure relative search intensity, not country shares, unique people, revenue or cultural penetration."
+  },
+  "chatgpt": {
+    "used": true,
+    "environment": "ChatGPT in Brave",
+    "role": "Public-source discovery and dated timeline. Key claims independently checked through primary X pages or retrieved attributed news reports. No AI-generated numbers used as evidence."
+  }
+}

@@ -7,3 +7,5 @@ node_modules/
 CLAUDE.md
 .gitignore
 .playwright-mcp
+AGENTS.md
+.agent-state/
