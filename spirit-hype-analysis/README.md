@@ -40,3 +40,18 @@ No sentiment percentages, unified hype score, unique worldwide reach, causal pub
 Rendered October 1 at 1440, 768 and 375 pixels with the installed Playwright verification skill: no reported console, request, accessible-name, heading-order or page-overflow findings. Theme/filter URL persistence, invalid query fallback, keyboard skip navigation and no-JavaScript evidence visibility passed separate browser checks. Desktop, mobile and light-theme screenshots were inspected. IST sample counts and the primary search series were independently recomputed from the supplied attachment and downloaded CSV. These checks do not turn the selected social sample into a representative survey.
 
 Direct-file sharing was additionally checked: theme selection, evidence filtering, query persistence, keyboard skip navigation and no-JavaScript content passed on the `file:` URL. The script uses a deferred, scoped classic script so local-file opening does not trigger module CORS restrictions.
+
+## Visual edition
+
+The report now opens with less prose and six visual views:
+
+- A date-positioned event rail beneath the search curves, separating official / reported maker statements, fan activity, and other attention. Twelve selected events link to sources; selection is bookmarkable through the `event` query parameter. Nearby events are stacked within their lane without changing their date position.
+- January and September example panels, explicitly not measured conversation shares or equal-duration engagement comparisons.
+- A release-date, casting and certificate tracker distinguishing announcements, intentions, unconfirmed claims and the audit cutoff.
+- A six-question reception matrix using selected comment paraphrases. Supporting, skeptical and mixed/questioning labels describe individual examples toward each question, not whole threads. Empty cells mean no example selected. Enter opens a cell; arrow keys move between available cells.
+- A ranked regional search dot plot. Values below 1 remain categorical, and missing observations are distinguished from zero interest. The full regional table is expandable.
+- A proposed audience-question / asset / follow-up-check map. These are campaign recommendations, not measured outcomes.
+
+Full chronology, discussion summaries, regional values, campaign ownership and source ledger are expandable. No new platform totals, sentiment proportions or competitor benchmarks were inferred. `visual-evidence.json` records the selected events and manually coded comment references. The original `evidence.json` and CSV observations remain unchanged.
+
+The visual edition passed the Playwright page checks at 1440, 768 and 375 pixels on its local-file URL. Separate checks covered event selection and URL restoration, previous/next bounds, invalid-event fallback, reception keyboard navigation, existing theme/source filter behavior and no-JavaScript access. Source comment IDs were checked against the RDTCLI retrievals. Desktop/mobile and light-theme screenshots were reviewed; crowded event labels and mobile country-label sizing were corrected.

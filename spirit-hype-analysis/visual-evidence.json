@@ -1,0 +1,245 @@
+{
+  "method": "Selected dated events, not exhaustive campaign coverage. Reception cells are manually coded paraphrases of selected comments, not classification of all retrieved comments or audience proportions. Blank cells mean no example selected. Statuses preserve the October 1 research cutoff.",
+  "events": [
+    {
+      "id": "poster",
+      "date": "2026-01-01",
+      "lane": "official",
+      "title": "First poster",
+      "summary": "New Year reveal with Prabhas and Triptii Dimri.",
+      "url": "https://x.com/InSpiritMode/status/2006432716632604832",
+      "status": "Official reveal"
+    },
+    {
+      "id": "date",
+      "date": "2026-01-16",
+      "lane": "official",
+      "title": "Release date",
+      "summary": "Director publishes the release-date graphic.",
+      "url": "https://x.com/imvangasandeep/status/2012140526120870069",
+      "status": "Director announcement"
+    },
+    {
+      "id": "villain",
+      "date": "2026-02-27",
+      "lane": "official",
+      "title": "Vivek Oberoi reveal",
+      "summary": "Officially introduces the antagonist.",
+      "url": "https://x.com/imvangasandeep/status/2027349795699044393",
+      "status": "Official reveal"
+    },
+    {
+      "id": "bms",
+      "date": "2026-03-04",
+      "lane": "fan",
+      "title": "BookMyShow interest claim",
+      "summary": "Claims 100K interests; historical BookMyShow counter was not independently recovered.",
+      "url": "https://x.com/TrendsPrabhas/status/2029096921529462829",
+      "status": "Unverified fan metric"
+    },
+    {
+      "id": "may",
+      "date": "2026-05-06",
+      "lane": "official",
+      "title": "Release date reaffirmed",
+      "summary": "Reported maker clarification retains March 5, 2027. Distribution language plans are not demand measurements.",
+      "url": "https://www.ndtv.com/entertainment/no-delay-for-sandeep-reddy-vangas-spirit-prabhas-film-to-release-on-march-5-2027-11457257",
+      "status": "Reported maker statement"
+    },
+    {
+      "id": "set",
+      "date": "2026-06-03",
+      "lane": "fan",
+      "title": "Shooting photo circulated",
+      "summary": "Shares a purported on-set photo; use as fan discussion, not an authenticated production bulletin.",
+      "url": "https://x.com/TrendsPrabhas/status/2061886457816752574",
+      "status": "Circulated by fan account"
+    },
+    {
+      "id": "cast",
+      "date": "2026-08-21",
+      "lane": "official",
+      "title": "Cast clarification",
+      "summary": "Producer says Don Lee, Chiranjeevi and Prakash Raj are not in the cast.",
+      "url": "https://timesofindia.indiatimes.com/entertainment/telugu/movies/news/spirit-don-lee-chiranjeevi-and-prakash-raj-not-part-of-prabhas-sandeep-reddy-vanga-films-cop-action-drama-makers-confirm/amp_articleshow/133401162.cms",
+      "status": "Reported producer statement"
+    },
+    {
+      "id": "shoot",
+      "date": "2026-08-26",
+      "lane": "official",
+      "title": "Director production update",
+      "summary": "40 shooting days completed, 65 remaining; March 5 reaffirmed. Adult certificate described as a preference.",
+      "url": "https://indianexpress.com/article/entertainment/telugu/sandeep-reddy-vanga-confirms-spirit-release-date-shares-update-on-new-arjun-reddy-version-10850200/",
+      "status": "Reported director statement"
+    },
+    {
+      "id": "critics",
+      "date": "2026-09-12",
+      "lane": "context",
+      "title": "Critic confrontation",
+      "summary": "Producer remarks provoke skeptical discussion. This is publicity around Spirit, not new film footage.",
+      "url": "https://www.ndtv.com/entertainment/sandeep-reddy-vanga-s-brother-openly-challenges-critics-to-kill-prabhas-starrer-spirit-12036550",
+      "status": "Reported publicity remarks"
+    },
+    {
+      "id": "dialogue",
+      "date": "2026-09-19",
+      "lane": "context",
+      "title": "September wordplay",
+      "summary": "Links a political response about a Warangal airport to a line in Spirit. High visibility, no fresh film footage.",
+      "url": "https://x.com/imvangasandeep/status/2101324821468729759",
+      "status": "Director political crossover"
+    },
+    {
+      "id": "delay",
+      "date": "2026-09-22",
+      "lane": "context",
+      "title": "October release claim",
+      "summary": "M9 reports a Fauzi/Spirit date shuffle, calling it an inside scoop for now. No maker confirmation retrieved.",
+      "url": "https://x.com/M9News_/status/2102343864577069109",
+      "status": "Unconfirmed media claim"
+    },
+    {
+      "id": "edit",
+      "date": "2026-09-22",
+      "lane": "fan",
+      "title": "Fan-created video",
+      "summary": "Creator says the video took four days to make. Shows continued fan participation.",
+      "url": "https://x.com/celluloidpanda/status/2102431879375040899",
+      "status": "Fan-created video"
+    }
+  ],
+  "reception_questions": [
+    {
+      "theme": "Creative identity",
+      "question": "Will Spirit feel distinct from Animal?",
+      "supporting": [],
+      "skeptical": [
+        {
+          "thread_id": "1q0jxbc",
+          "comment_id": "nwyfx31",
+          "url": "https://www.reddit.com/r/tollywood/comments/1q0jxbc/spirit_first_look/nwyfx31/",
+          "paraphrase": "First-look imagery feels too close to Animal."
+        },
+        {
+          "thread_id": "1q0jxbc",
+          "comment_id": "nwyhnn3",
+          "url": "https://www.reddit.com/r/tollywood/comments/1q0jxbc/spirit_first_look/nwyhnn3/",
+          "paraphrase": "An earlier fan-made cop look suggested a more distinct character."
+        }
+      ],
+      "mixed_or_questioning": []
+    },
+    {
+      "theme": "Performance / reliability",
+      "question": "Will Prabhas deliver?",
+      "supporting": [],
+      "skeptical": [
+        {
+          "thread_id": "1wbkgc4",
+          "comment_id": "p8r200p",
+          "url": "https://www.reddit.com/r/BollyBlindsNGossip/comments/1wbkgc4/prabhas_and_postponements/p8r200p/",
+          "paraphrase": "Questions the claimed level of commitment in a postponement discussion."
+        },
+        {
+          "thread_id": "1wbkgc4",
+          "comment_id": "p8r01kt",
+          "url": "https://www.reddit.com/r/BollyBlindsNGossip/comments/1wbkgc4/prabhas_and_postponements/p8r01kt/",
+          "paraphrase": "Expresses doubt about Prabhas' acting ability; personal insults omitted."
+        }
+      ],
+      "mixed_or_questioning": [
+        {
+          "thread_id": "1wbkgc4",
+          "comment_id": "p8qzf7y",
+          "url": "https://www.reddit.com/r/BollyBlindsNGossip/comments/1wbkgc4/prabhas_and_postponements/p8qzf7y/",
+          "paraphrase": "Expresses concern conditionally: if the schedule allegations are true."
+        }
+      ]
+    },
+    {
+      "theme": "Cast / visual appeal",
+      "question": "Does the cast create curiosity?",
+      "supporting": [
+        {
+          "thread_id": "1rg4ae4",
+          "comment_id": "o7onxih",
+          "url": "https://www.reddit.com/r/tollywood/comments/1rg4ae4/power_intensity_swag_presenting_vivek_oberois_1st/o7onxih/",
+          "paraphrase": "Praises the poster styling and expresses excitement."
+        }
+      ],
+      "skeptical": [
+        {
+          "thread_id": "1vtm5m3",
+          "comment_id": "p4u8eiy",
+          "url": "https://www.reddit.com/r/tollywood/comments/1vtm5m3/spirit_producer_addresses_don_lee_rumors_and/p4u8eiy/",
+          "paraphrase": "Disappointed about missing the anticipated Prakash Raj / Prabhas pairing."
+        }
+      ],
+      "mixed_or_questioning": [
+        {
+          "thread_id": "1rg4ae4",
+          "comment_id": "o7ook00",
+          "url": "https://www.reddit.com/r/tollywood/comments/1rg4ae4/power_intensity_swag_presenting_vivek_oberois_1st/o7ook00/",
+          "paraphrase": "Connects the reveal to earlier, unconfirmed casting rumors."
+        }
+      ]
+    },
+    {
+      "theme": "Character dynamics",
+      "question": "Are familiar gender tropes returning?",
+      "supporting": [],
+      "skeptical": [
+        {
+          "thread_id": "1q2v0e5",
+          "comment_id": "nxfs367",
+          "url": "https://www.reddit.com/r/BollyBlindsNGossip/comments/1q2v0e5/what_exactly_is_vanga_cooking_with_spirit/nxfs367/",
+          "paraphrase": "Expects familiar nudity, substance use and domestic-violence imagery."
+        },
+        {
+          "thread_id": "1vtqio6",
+          "comment_id": "p4vn6ml",
+          "url": "https://www.reddit.com/r/BollyBlindsNGossip/comments/1vtqio6/producer_pranay_reddy_vanga_opens_up_on_deepikas/p4vn6ml/",
+          "paraphrase": "Questions the fit of female characters and the response to negotiations."
+        }
+      ],
+      "mixed_or_questioning": []
+    },
+    {
+      "theme": "Publicity",
+      "question": "Is critic confrontation helping confidence?",
+      "supporting": [],
+      "skeptical": [
+        {
+          "thread_id": "1weaq3i",
+          "comment_id": "p9c4kov",
+          "url": "https://www.reddit.com/r/BollyBlindsNGossip/comments/1weaq3i/sandeep_reddy_vangas_brother_throws_open_a/p9c4kov/",
+          "paraphrase": "Interprets the critic confrontation as ragebait."
+        }
+      ],
+      "mixed_or_questioning": []
+    },
+    {
+      "theme": "Release priority",
+      "question": "Do fans want Spirit first?",
+      "supporting": [
+        {
+          "thread_id": "1wsfr2c",
+          "comment_id": "pckyxqx",
+          "url": "https://www.reddit.com/r/tollywood/comments/1wsfr2c/wts_ur_thoughts_on_this/pckyxqx/",
+          "paraphrase": "Favors Spirit before Fauzi and expresses strong anticipation."
+        }
+      ],
+      "skeptical": [],
+      "mixed_or_questioning": [
+        {
+          "thread_id": "1wsfr2c",
+          "comment_id": "pckxllv",
+          "url": "https://www.reddit.com/r/tollywood/comments/1wsfr2c/wts_ur_thoughts_on_this/pckxllv/",
+          "paraphrase": "Raises the impact on Fauzi financiers."
+        }
+      ]
+    }
+  ]
+}
