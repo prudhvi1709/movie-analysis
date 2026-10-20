@@ -1,0 +1,58 @@
+{
+  "requested_method": "RDT CLI",
+  "requested_window": {
+    "from": "2026-10-18",
+    "through": "2026-10-20"
+  },
+  "rdt_cli_status": "blocked",
+  "rdt_cli_error": "Reddit requests failed TLS certificate verification. The configured CA bundle failed key-usage validation; the standard Mozilla CA bundle rejected a self-signed certificate in the chain.",
+  "fallback_method": "Public Reddit threads discovered with web search and opened for selected comments. This is not a full Reddit export or a representative sample.",
+  "threads": [
+    {
+      "subreddit": "tollywood",
+      "title": "Spirit Poster with New Release date!",
+      "url": "https://www.reddit.com/r/tollywood/comments/1x8w0wi/spirit_poster_with_new_release_date/",
+      "listed_date": "2026-10-18",
+      "topics": ["poster quality", "Prabhas look", "long wait", "release delay"],
+      "readout": "Comments question whether the image feels like a finished movie poster, ask to see Prabhas' face, and react to waiting another year. A few defend the look or joke about it."
+    },
+    {
+      "subreddit": "prabhas",
+      "title": "It's official Spirit new release is Oct 29, 2027.",
+      "url": "https://www.reddit.com/r/prabhas/comments/1x8w82e/its_official_spirit_new_release_is_oct_292027/",
+      "listed_date": "2026-10-18",
+      "topics": ["Prabhas look", "poster reaction", "long wait", "Fauzi scheduling"],
+      "readout": "Some fans like how Prabhas looks. Others call the poster underwhelming, while discussing the year-long wait and whether Fauzi's schedule affected the date."
+    },
+    {
+      "subreddit": "tollywood",
+      "title": "SPIRIT to CLASH with Ramayana2 on October 29, 2026",
+      "url": "https://www.reddit.com/r/tollywood/comments/1x8w56o/spirit_to_clash_with_ramayana2_on_october_29_2026/",
+      "listed_date": "2026-10-18",
+      "topics": ["possible Ramayana 2 clash", "date uncertainty"],
+      "readout": "Commenters debate whether a clash will happen and speculate that one film may move. The thread title says 2026, but the Spirit poster announces October 29, 2027; do not use the title's year as a release-date fact."
+    },
+    {
+      "subreddit": "kollywood",
+      "title": "Spirit movie release got delayed by almost another 8 months",
+      "url": "https://www.reddit.com/r/kollywood/comments/1x8wnvz/spirit_movie_release_got_delayed_by_almost/",
+      "listed_date": "2026-10-18",
+      "topics": ["delay", "Fauzi first", "Ramayana 2 clash", "criticism"],
+      "readout": "Comments include frustration about delays, speculation that Fauzi will release first, criticism of Vanga, and questions about a Ramayana 2 clash."
+    },
+    {
+      "subreddit": "NotJustTollywood",
+      "title": "Spirit postponed - is it because of Prabhas over commitment of movies",
+      "url": "https://www.reddit.com/r/NotJustTollywood/comments/1x8w9t1/spirit_postponed_is_it_because_of_prabhas_over/",
+      "listed_date": "2026-10-18",
+      "topics": ["schedule speculation", "Diwali date", "confidence in marketing"],
+      "readout": "The discussion blames scheduling and Prabhas' many projects, but some commenters welcome Diwali as a strong release window. Others question the public hype and want the film itself to prove its promise."
+    }
+  ],
+  "limitations": [
+    "The five threads are selected public search results, not all Reddit posts or comments from the date window.",
+    "No Reddit sentiment totals or mention counts are reported.",
+    "The search index and visible comments can change after collection.",
+    "RDT CLI did not return Reddit data because TLS verification failed."
+  ]
+}

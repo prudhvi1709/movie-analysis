@@ -1,0 +1,64 @@
+{
+  "title": "The new date has fans excited; many are talking about a possible Ramayana 2 clash",
+  "sample_count": 897,
+  "raw_rows": 977,
+  "theme_mentions": {
+    "Hype, celebration, and support": 532,
+    "Release date and Diwali": 299,
+    "Poster and Prabhas look": 116,
+    "Ramayana 2 clash": 82,
+    "Teaser, content, and next-update talk": 81,
+    "Long-wait or release-date concerns": 55
+  },
+  "sentiment_cues": {
+    "Positive or excited cues": 481,
+    "Mixed: excitement with a concern": 72,
+    "Concern or disappointment cues": 88,
+    "Mostly informational cues": 80,
+    "Too brief or unclear to label": 176
+  },
+  "source_summary": [
+    {
+      "label": "Director post 1 replies",
+      "text_rows": 22,
+      "included_unique_posts": 22
+    },
+    {
+      "label": "Director post 2 replies",
+      "text_rows": 359,
+      "included_unique_posts": 359
+    },
+    {
+      "label": "Movie-only keyword results",
+      "text_rows": 57,
+      "included_unique_posts": 30
+    },
+    {
+      "label": "Fan-account date-post replies",
+      "text_rows": 512,
+      "included_unique_posts": 486
+    }
+  ],
+  "sources": [
+    {
+      "id": 0,
+      "rows": 27,
+      "sha256": "988cd408353acd70691975240bf23a045d434a53bac03e71f479434e3922aab0"
+    },
+    {
+      "id": 1,
+      "rows": 376,
+      "sha256": "f417da100d5e15fbc1c0d481ec7f384512fb6ef9e2b613335f56e7a39fd05fce"
+    },
+    {
+      "id": 2,
+      "rows": 57,
+      "sha256": "7d2118bfc89522702858209f80940ee2eb65f06d9a2bfa142c504dad5dc899d6"
+    },
+    {
+      "id": 3,
+      "rows": 517,
+      "sha256": "ed74ff8b8f2bc60185e4c25cbb312ef7bc8fde396a707995690e86a39e1fe404"
+    }
+  ]
+}
